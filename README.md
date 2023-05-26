@@ -1,44 +1,24 @@
-# dynamicexploration
-Each folder contains a docker file used to run a specific planner.
-Each Dockerfile specifies the correct OS- and ROS-version to be used and downloads the right packages.
+# Autonomous 3D exploration with dynamic obstacles
+## Towards Intelligent Navigation and Collision Avoidance for Autonomous 3D Exploration with dynamic obstacles
+### By Ludvig Widén & Emil Wiman
 
-To setup the environt run:
-`cd /path/to/repo`
-followed by
-`nano dev_env.sh`
-and change the `IMAGE` variable to the name of one of the folders.
+#### Information
+This repository is linked to Ludvig and Emils Master Thesis Work at Linköping University.
 
-Then run:
-`./dev_env.sh build`
-followed by
-`./dev_env.sh start`
+This master's thesis aims to investigate how a system can be built to autonomously explore and map a 3D environment where dynamic obstacles are present. 
 
-If your user is `root`, you have succeded.
+It resulted in a modified and extended version of the Autonomous Exploration Planner [AEP](https://github.com/mseln/aeplanner), called **Dynamic Autonomous Exploration Planner (DAEP)**.
 
-## cudagl16_aep
-This folder contains the Docker file used to run the AEP planner.
+To evaluate DAEP, the planner was compared with AEP, [DEP](https://github.com/Zhefan-Xu/DEP), and [RH-NBVP](https://github.com/ethz-asl/nbvplanner). This repo contains contains functionality to run the mentioned planners in a rootless docker environment.
 
-## cudagl18_dep
-This folder contains the Docker file used to run the DEP planner.
 
-## cudagl18_eth
-This folder contains the Docker file used to run the ETH Informative planner.
+#### System Requirements
+The system was tested on a computer with:
 
-## ros_indigo_nvidia_nbvp
-This folder contains the Docker file used to run the RH-NBV planner.
+- AMD Ryzen 9 5900X 12-core processor 
+- NVIDIA GeForce RTX 3090 Ti
+- Ubuntu 22.04.2 operating system. 
+- [Rootless docker mode](https://docs.docker.com/engine/security/rootless/).
 
-## Unreal Engine 5
-If you like to run Unreal Engine 5, use the unreal5.sh to setup the environment.
-First run 
-`./unreal5.sh load /path/to/unreal5.tar`
-to load in the Unreal Engine 5 image from a .tar file. Then
-`./unreal5.sh start`
-to start the container. To start the editor run
-`./UnrealEditor`
-
-##Troubleshooting
-If you get the error saying **No available video device** when running ./UnrealEditor, type
-`exit`
-to exit the docker container and then run
-`xhost + local:docker`
-and then run the script again and try to start the UnrealEditor
+#### Installation and execution
+See wiki.
