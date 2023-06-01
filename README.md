@@ -11,8 +11,7 @@ It resulted in a modified and extended version of the Autonomous Exploration Pla
 
 To evaluate DAEP, the planner was compared with AEP, [DEP](https://github.com/Zhefan-Xu/DEP), and [RH-NBVP](https://github.com/ethz-asl/nbvplanner). This repo contains contains functionality to run the mentioned planners in a rootless docker environment.
 
-For more information, please see the [thesis report]()
-
+For more information on how daeplanner works, please see the [thesis report]().
 
 #### System Requirements
 The system was tested on a computer with:
