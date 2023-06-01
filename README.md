@@ -21,4 +21,4 @@ The system was tested on a computer with:
 - [Rootless docker mode](https://docs.docker.com/engine/security/rootless/).
 
 #### Installation and execution
-See wiki.
+See [Wiki](https://github.com/LudvigWiden/daeplanner/wiki). 
