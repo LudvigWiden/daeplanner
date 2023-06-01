@@ -1,0 +1,11 @@
+<launch>
+  <!-- We resume the logic in empty_world.launch, changing only the name of the world to be launched -->
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+
+    <arg name="world_name" value="$(find drone_gazebo)/worlds/apartment_static.world"/>
+    <!-- more default parameters can be changed here -->
+  </include>
+  
+   <!--  Does not affect anything but arg is required for simulation.sh -->
+  <arg name="avoidance" default="false" />
+</launch>

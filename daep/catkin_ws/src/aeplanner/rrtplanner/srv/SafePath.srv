@@ -1,0 +1,6 @@
+# Path to be examined
+nav_msgs/Path path
+float64[] time_steps
+---
+# Return if the path if safe from dynamic obstacles
+bool safe

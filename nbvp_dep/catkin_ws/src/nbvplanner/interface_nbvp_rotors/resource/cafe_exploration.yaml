@@ -1,0 +1,46 @@
+## Parameters used for Cafe-world
+
+system/v_max: 0.2
+system/dyaw_max: 0.75
+system/camera/pitch: [15.0] # Planner not working with 0.0
+system/camera/horizontal: [103.2]
+system/camera/vertical: [77.4]
+system/bbx/x: 0.4
+system/bbx/y: 0.4
+system/bbx/z: 0.1
+system/bbx/overshoot: 0.25
+
+nbvp/gain/free: 0.0
+nbvp/gain/occupied: 0.0
+nbvp/gain/unmapped: 1.0
+nbvp/gain/area: 0.0
+nbvp/gain/probabilistic: 0.0
+nbvp/gain/range: 1.5
+nbvp/gain/zero: 0.0
+nbvp/gain/degressive_coeff: 0.5
+nbvp/tree/extension_range: 1.0
+nbvp/tree/exact_root: true
+nbvp/tree/initial_iterations: 15
+nbvp/tree/cuttoff_iterations: 200
+nbvp/dt: 0.1
+
+nbvp/log/throttle: 0.25
+nbvp/log/on: true
+
+# bounding box: necessary to limit the simulation 
+# scenario (smaller than actual gazebo scenario)
+bbx/minX: -5
+bbx/minY: -11
+bbx/minZ: 0.0
+bbx/maxX: 4
+bbx/maxY: 12
+bbx/maxZ: 2.87
+bbx/softBounds: false
+bbx/volume : 510
+
+# Map limits
+boundary/min: [-5, -11, 0]
+boundary/max: [4, 12, 2.5]
+
+pcl_throttle: 0.36
+inspection_throttle: 0.5

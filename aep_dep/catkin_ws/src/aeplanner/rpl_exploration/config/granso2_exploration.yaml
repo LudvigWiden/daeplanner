@@ -1,0 +1,45 @@
+camera/horizontal_fov: 103.2
+camera/vertical_fov: 77.4
+
+raycast/dr:     0.2
+raycast/dphi:   10
+raycast/dtheta: 10
+
+system/bbx/r: 0.2 #0.75
+system/bbx/overshoot: 0.25
+
+aep/gain/r_min: 0
+aep/gain/r_max: 5
+aep/gain/zero: 20
+aep/gain/lambda: 0.75
+aep/gain/sigma_thresh: 0.2
+aep/tree/extension_range: 1
+aep/tree/max_sampling_radius: 10
+aep/tree/initial_iterations: 15
+aep/tree/cutoff_iterations: 30
+
+# DAEP
+daep/gain/cache_node_threshold: 10
+daep/gain/node_gain_threshold: 5
+daep/dfm/zeta: 0.5
+daep/kf/iterations: 30
+daep/kf/time_step: 0.5
+visualizeDFM: true
+visualize_static_and_dynamic_rays: false
+
+rrt/min_nodes: 100
+
+# bounding box: necessary to limit the simulation 
+# scenario (smaller than actual gazebo scenario)
+boundary/min: [96, -139, 5.5]
+boundary/max: [201, -30, 9]
+boundary/volume: 40057 #m3 105*109*3.5
+res: 0.2
+
+visualize_rays: false
+visualize_tree: true
+visualize_exploration_area: true
+
+robot_frame: "fcu"
+world_frame: "world"
+

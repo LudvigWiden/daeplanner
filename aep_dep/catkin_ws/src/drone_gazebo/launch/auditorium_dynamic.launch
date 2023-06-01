@@ -1,0 +1,18 @@
+<launch>
+  <!-- We resume the logic in empty_world.launch, changing only the name of the world to be launched -->
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+
+    <arg name="world_name" value="$(find drone_gazebo)/worlds/auditorium_dynamic.world"/>
+    <!-- more default parameters can be changed here -->
+  </include>
+
+  <!-- Moving objects tries to avoid humans-->
+  <arg name="avoidance" default="false" />
+
+  <node pkg="drone_gazebo" type="field_motion.py" name="motion1" args="'person_walking1' '[(0, 1.5), (0, -3.6)]' $(arg avoidance)" />
+
+  <node pkg="drone_gazebo" type="field_motion.py" name="motion2" args="'person_walking2' '[(1.15, -4.4), (5.18, -5.5)]' $(arg avoidance)" />
+
+  <node pkg="drone_gazebo" type="field_motion.py" name="motion3" args="'person_walking3' '[(10.5, 3.45), (5.41, 3.45)]' $(arg avoidance)" />
+
+</launch>

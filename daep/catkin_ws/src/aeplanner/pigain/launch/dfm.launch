@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<launch>
+  <arg name="param_file" default="$(find pigain)/config/dfm_config.yaml" />
+  <node name="dfm" pkg="pigain" type="dfm.py" output="screen">
+    <rosparam command="load" file="$(arg param_file)" />
+  </node>
+</launch>

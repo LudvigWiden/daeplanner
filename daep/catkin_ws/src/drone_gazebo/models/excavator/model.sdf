@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <model name="excavator">
+    <static>true</static>
+    <link name="excavator_link">
+      <collision name="collision">
+        <geometry>
+          <mesh>
+          <scale>1.6 1.6 1.6</scale>
+            <uri>model://excavator/meshes/model.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <mesh>
+          <scale>1.6 1.6 1.6</scale>
+            <uri>model://excavator/meshes/model.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+  </model>
+</sdf>
+

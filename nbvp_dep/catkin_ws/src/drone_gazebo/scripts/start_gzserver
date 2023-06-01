@@ -1,0 +1,15 @@
+#!/bin/sh
+#store the argument passed to the script
+final="$@" # capture all arguments
+
+#find where the 'sjtu_drone' is
+pack_path=$(rospack find drone_gazebo)
+
+#export the gazebo path
+export GAZEBO_MODEL_PATH=$pack_path/models:$GAZEBO_MODEL_PATH 
+export GAZEBO_RESOURCE_PATH=$pack_path:/usr/share/gazebo-3.0:/usr/share/gazebo-4.0:/usr/share/gazebo_models:$GAZEBO_RESOURCE_PATH
+export GAZEBO_PLUGIN_PATH=$pack_path/plugins:$GAZEBO_PLUGIN_PATH
+
+#start the gazebo server
+rosrun gazebo_ros gzserver $final
+

@@ -1,0 +1,31 @@
+<?xml version='1.0'?>
+<sdf version='1.0'>
+    <model name="storage_room">
+        <static>true</static>
+        <link name='storage_room'>
+            <pose>0 0 0 0 0 0</pose>
+
+            <collision name='collision'>
+                <geometry>
+                    <box> 0 0 0 </box>
+                </geometry>
+<!--                 <surface>
+                    <friction>
+                        <ode>
+                            <mu>2</mu>
+                            <mu2>2</mu2>
+                        </ode>
+                    </friction>
+                </surface> -->
+            </collision>
+
+
+            <visual name='visual'>
+                <pose> 0 0 0 0 0 0</pose>
+                <geometry>
+                    <mesh><uri>model://storage_room/meshes/test.dae</uri></mesh>
+                </geometry>
+            </visual>
+        </link>
+    </model>
+</sdf>

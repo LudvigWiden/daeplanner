@@ -1,0 +1,32 @@
+<launch>
+   <param name="/use_sim_time" type="bool" value="true"/>
+
+  <!-- We resume the logic in empty_world.launch, changing only the name of the world to be launched -->
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+
+    <arg name="world_name" value="$(find drone_gazebo)/worlds/maze_dynamic.world"/>
+    <arg name="gui" value="true"/>
+
+    <!-- more default parameters can be changed here -->
+  </include>
+
+  <!-- Moving objects tries to avoid humans-->
+  <arg name="avoidance" default="false" />
+
+
+  <!-- person1 -->
+  <node pkg="drone_gazebo" type="field_motion.py" name="motion1" args="'person_walking1' '[(-3.5, 0.4), (1.4, 0.4), (1.4, -1.6), (-3.5, -1.6), (-3.5, 0.4)]' $(arg avoidance)" />
+  
+  <!-- person2 -->
+  <node pkg="drone_gazebo" type="field_motion.py" name="motion2" args="'person_walking2' '[(-5.6, -8.8), (-5.6, -9.8), (0.37, -9.8), (0.37, -8.8), (-5.6, -8.8)]' $(arg avoidance)" />
+  
+  <!-- person3 -->
+  <node pkg="drone_gazebo" type="field_motion.py" name="motion3" args="'person_walking3' '[(4.6, -2.8), (12.5, -2.8), (12.5, -4), (8.7, -4), (8.7, -7), (8.7, -4), (4.6, -2.8)]' $(arg avoidance)" />
+  
+  <!-- person4 -->
+  <node pkg="drone_gazebo" type="field_motion.py" name="motion4" args="'person_walking4' '[(4.7, -9), (10.7, -9), (5.7, -10), (5.7, -12.2), (4.7, -9)]' $(arg avoidance)" />
+  
+  <!-- person5 -->
+  <node pkg="drone_gazebo" type="field_motion.py" name="motion5" args="'person_walking5' '[(-0.7, -15.5), (12.3, -15.5), (-0.7, -15.5)]' $(arg avoidance)" />
+
+</launch>

@@ -1,0 +1,48 @@
+<launch>
+    <!-- Parameters -->
+    <arg name="rviz_config" default="$(find drone_gazebo)/daep.rviz" />
+    <arg name="mode" default="static" />
+    <arg name="world" default="cafe" />
+    <arg name="world_launch" default="$(find drone_gazebo)/launch/$(arg world)_$(arg mode).launch" />
+    <arg name="spawn_pos" default="(0,0,0.2)" />
+    <!-- Human avoidance -->
+    <arg name="avoidance" default="false" />
+    <!-- Drone avoidance -->
+    <arg name="avoidance_mode" default="true" />
+
+     <!-- Load world and Gazebo -->
+    <include file="$(arg world_launch)">
+      <arg name="avoidance" value="$(arg avoidance)"/>
+    </include>
+
+    <!--Set the correct config file-->
+     <arg name="config_file" default="$(arg world)_exploration.yaml" />
+     <arg name="param_file" default="$(find rpl_exploration)/config/$(arg config_file)" />
+     <rosparam command="load" file="$(arg param_file)" />
+
+    <!-- Spawn drone -->
+    <node pkg="drone_gazebo" type="spawn_drone.py" name="spawn_drone" output="screen">
+      <param name="spawn_pos" value="$(arg spawn_pos)" />
+    </node>
+    
+    <!-- Motion planning -->
+    <node pkg="drone_gazebo" type="move_and_rotate.py" name="move_and_rotate" output="screen">
+        <remap from="/goal" to="/aeplanner/goal" />
+        <param name="avoidance_mode" value="$(arg avoidance_mode)"/>
+    </node>
+   
+    <!-- Transform Broadcaster -->
+    <node name="tfbc" pkg="drone_gazebo" type="transform_broadcaster"/> 
+
+    <!--Start the pose publisher -->
+    <!--Set "usePoseStamped" to 'True' for PoseStamped, or 'False' for PoseWithCovarianceStamped -->
+    <node pkg="drone_gazebo" type="pose_publisher_node.py" name="pose_publisher_node" output="screen" >
+      <param name="usePoseStamped" type="bool" value="True" />
+    </node> 
+
+    <!-- Start RViz -->
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(arg rviz_config)" />
+
+    <!-- Launch Python node for collision detection -->
+    <node name="collision_detection_node" pkg="drone_gazebo" type="collisions.py" output="screen"/>
+</launch>

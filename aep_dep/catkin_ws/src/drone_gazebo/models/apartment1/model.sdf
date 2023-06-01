@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="Apartment1">
+    <static>true</static>
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <mesh>
+            <uri>model://apartment1/meshes/model.dae</uri>
+            <scale>0 0 0</scale>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <uri>model://apartment1/meshes/model.dae</uri>
+            <scale>1.5 1.5 1</scale>
+          </mesh>
+        </geometry>
+        <material>
+          <!-- <diffuse>1 1 1 1 </diffuse> -->
+        </material>
+      </visual>
+    </link>
+  </model>
+</sdf>

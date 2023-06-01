@@ -1,0 +1,38 @@
+<launch>
+  <!-- We resume the logic in empty_world.launch, changing only the name of the world to be launched -->
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+
+    <arg name="world_name" value="$(find drone_gazebo)/worlds/exhibition_dynamic.world"/>
+    <!-- more default parameters can be changed here -->
+  </include>
+
+  <!-- Moving objects tries to avoid humans-->
+  <arg name="avoidance" default="false" />
+  
+  <node pkg="drone_gazebo" type="field_motion.py" name="motion1" args="'person_walking1' '[(-6.5, -6.5), (-6.5, -6.5), (-6.5, 6.5), (6.5, 6.5), (6.5, -6.5)]' $(arg avoidance)" />
+  <node pkg="drone_gazebo" type="field_motion.py" name="motion2" args="'person_walking2' '[(-4.5, -6.5), (-6.5, -6.5), (-6.5, 6.5), (6.5, 6.5), (6.5, -6.5)]' $(arg avoidance)" />
+  <node pkg="drone_gazebo" type="field_motion.py" name="motion3" args="'person_walking3' '[(-2.5, -6.5), (-6.5, -6.5), (-6.5, 6.5), (6.5, 6.5), (6.5, -6.5)]' $(arg avoidance)" />
+  <node pkg="drone_gazebo" type="field_motion.py" name="motion4" args="'person_walking4' '[(-0.5, -6.5), (-6.5, -6.5), (-6.5, 6.5), (6.5, 6.5), (6.5, -6.5)]' $(arg avoidance)" />
+  <node pkg="drone_gazebo" type="field_motion.py" name="motion5" args="'person_walking5' '[(1.5, -6.5), (-6.5, -6.5), (-6.5, 6.5), (6.5, 6.5), (6.5, -6.5)]' $(arg avoidance)" />
+  
+  <node pkg="drone_gazebo" type="field_motion.py" name="motion8" args="'person_walking8' '[(6.5, -4.5), (6.5, -6.5), (-6.5, -6.5), (-6.5, 6.5), (6.5, 6.5)]' $(arg avoidance)" />
+  <node pkg="drone_gazebo" type="field_motion.py" name="motion9" args="'person_walking9' '[(6.5, -2.5), (6.5, -6.5), (-6.5, -6.5), (-6.5, 6.5), (6.5, 6.5)]' $(arg avoidance)" />
+  <node pkg="drone_gazebo" type="field_motion.py" name="motion10" args="'person_walking10' '[(6.5, -0.5), (6.5, -6.5), (-6.5, -6.5), (-6.5, 6.5), (6.5, 6.5)]' $(arg avoidance)" />
+  <node pkg="drone_gazebo" type="field_motion.py" name="motion11" args="'person_walking11' '[(6.5, 1.5), (6.5, -6.5), (-6.5, -6.5), (-6.5, 6.5), (6.5, 6.5)]' $(arg avoidance)" />
+  <node pkg="drone_gazebo" type="field_motion.py" name="motion12" args="'person_walking12' '[(6.5, 3.5), (6.5, -6.5), (-6.5, -6.5), (-6.5, 6.5), (6.5, 6.5)]' $(arg avoidance)" />
+  <node pkg="drone_gazebo" type="field_motion.py" name="motion13" args="'person_walking13' '[(6.5, 5.5), (6.5, -6.5), (-6.5, -6.5), (-6.5, 6.5), (6.5, 6.5)]' $(arg avoidance)" />
+
+  <node pkg="drone_gazebo" type="field_motion.py" name="motion14" args="'person_walking14' '[(-6.5, 5.5), (-6.5, 6.5), (6.5, 6.5), (6.5, -6.5), (-6.5, -6.5)]' $(arg avoidance)" />
+  <node pkg="drone_gazebo" type="field_motion.py" name="motion15" args="'person_walking15' '[(-6.5, 3.5), (-6.5, 6.5), (6.5, 6.5), (6.5, -6.5), (-6.5, -6.5)]' $(arg avoidance)" />
+  <node pkg="drone_gazebo" type="field_motion.py" name="motion16" args="'person_walking16' '[(-6.5, 1.5), (-6.5, 6.5), (6.5, 6.5), (6.5, -6.5), (-6.5, -6.5)]' $(arg avoidance)" />
+  <node pkg="drone_gazebo" type="field_motion.py" name="motion17" args="'person_walking17' '[(-6.5, -0.5), (-6.5, 6.5), (6.5, 6.5), (6.5, -6.5), (-6.5, -6.5)]' $(arg avoidance)" />
+  <node pkg="drone_gazebo" type="field_motion.py" name="motion18" args="'person_walking18' '[(-6.5, -2.5), (-6.5, 6.5), (6.5, 6.5), (6.5, -6.5), (-6.5, -6.5)]' $(arg avoidance)" />
+  <node pkg="drone_gazebo" type="field_motion.py" name="motion19" args="'person_walking19' '[(-6.5, -4.5), (-6.5, 6.5), (6.5, 6.5), (6.5, -6.5), (-6.5, -6.5)]' $(arg avoidance)" />
+
+  <node pkg="drone_gazebo" type="field_motion.py" name="motion20" args="'person_walking20' '[(5.5, 6.5), (6.5, 6.5), (6.5, -6.5),(-6.5, -6.5), (-6.5, 6.5)]' $(arg avoidance)" />
+  <node pkg="drone_gazebo" type="field_motion.py" name="motion21" args="'person_walking21' '[(3.5, 6.5), (6.5, 6.5), (6.5, -6.5),(-6.5, -6.5), (-6.5, 6.5)]' $(arg avoidance)" />
+  <node pkg="drone_gazebo" type="field_motion.py" name="motion22" args="'person_walking22' '[(1.5, 6.5), (6.5, 6.5), (6.5, -6.5),(-6.5, -6.5), (-6.5, 6.5)]' $(arg avoidance)" />
+  <node pkg="drone_gazebo" type="field_motion.py" name="motion23" args="'person_walking23' '[(-0.5, 6.5), (6.5, 6.5), (6.5, -6.5),(-6.5, -6.5), (-6.5, 6.5)]' $(arg avoidance)" />
+  <node pkg="drone_gazebo" type="field_motion.py" name="motion24" args="'person_walking24' '[(-1.5, 6.5), (6.5, 6.5), (6.5, -6.5),(-6.5, -6.5), (-6.5, 6.5)]' $(arg avoidance)" />
+
+</launch>

@@ -1,0 +1,24 @@
+# MAP RESOLUTION:
+RES: 0.2
+
+# Environment Limit
+env_x_min: -5
+env_x_max: 70
+env_y_min: -20
+env_y_max: 40
+env_z_min: 0
+env_z_max: 5.0
+
+# Environment volume
+volume: 18271
+
+# Map limits
+boundary/min: [-5, -20, 0.0]
+boundary/max: [70, 40, 5]
+
+# Define Drone Size:
+DRONE_X: 0.4
+DRONE_Y: 0.4
+DRONE_Z: 0.1
+
+

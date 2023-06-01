@@ -1,0 +1,35 @@
+<?xml version='1.0'?>
+<sdf version='1.0'>
+    <model name="ConferenceRoom">
+        <static>true</static>
+        <link name='conference_room'>
+            <pose>0 0 0 0 0 0</pose>
+
+            <collision name='collision'>
+                <geometry>
+                    <box> 0 0 0 </box>
+                </geometry>
+
+            </collision>
+
+            <inertial>
+                <mass>1000</mass>
+                <inertia> 
+                    <ixx> 1.0 </ixx>
+                    <ixy> 0.0 </ixy>
+                    <ixz> 0.0 </ixz>
+                    <iyy> 1.0 </iyy>
+                    <iyz> 0.0 </iyz>
+                    <izz> 1.0 </izz>
+                </inertia> 
+            </inertial>
+
+            <visual name='visual'>
+                <pose> -14.3 -0.57 0 1.5707 0 0</pose>
+                <geometry>
+                    <mesh><uri>model://ConferenceRoom/meshes/Area3_conferenceRoom_1_noCeiling.dae</uri></mesh>
+                </geometry>
+            </visual>
+        </link>
+    </model>
+</sdf>

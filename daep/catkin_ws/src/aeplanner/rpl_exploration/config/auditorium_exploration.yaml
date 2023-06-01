@@ -1,0 +1,61 @@
+camera/horizontal_fov: 103.2
+camera/vertical_fov: 77.4
+
+raycast/dr:     0.2
+raycast/dphi:   10
+raycast/dtheta: 10
+
+system/bbx/r: 0.2
+system/bbx/overshoot: 0.25
+
+aep/gain/r_min: 0
+aep/gain/r_max: 5
+aep/gain/zero: 15
+aep/gain/lambda: 0.75
+aep/gain/sigma_thresh: 0.2
+aep/tree/extension_range: 1
+aep/tree/max_sampling_radius: 10
+aep/tree/initial_iterations: 15
+aep/tree/cutoff_iterations: 30
+
+# DAEP
+daep/gain/cache_node_threshold: 15
+daep/gain/node_gain_threshold: 15
+daep/dfm/zeta: 0.5
+daep/kf/iterations: 20
+daep/kf/time_step: 0.5
+daep/rrt/max_sampled_initial_nodes: 30
+daep/rrt/max_sampled_nodes: 70
+boosted_boundary_length: 1
+boost_magnitude: 6
+global_planner_counter: 25
+max_avoidance_counter: 15
+drone_freeze: false
+look_ahead_horizon: 5
+
+visualizeDFM: true
+visualize_static_and_dynamic_rays: false
+
+human_height: 1.8
+human_width: 1
+human_linear_velocity: 0.35
+human_angular_velocity: 1
+drone_height: 0.1
+drone_width: 0.4
+drone_linear_velocity: 0.5
+drone_angular_velocity: 1
+
+rrt/min_nodes: 100
+
+boundary/min: [-2.5, -8.8, 0.0]
+boundary/max: [16.5, 5.9, 3]
+boundary/volume: 798 # 826.5 - 1*19/2 * 3
+res: 0.2
+
+visualize_rays: false
+visualize_tree: true
+visualize_exploration_area: true
+
+robot_frame: "fcu"
+world_frame: "world"
+

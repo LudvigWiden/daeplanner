@@ -1,0 +1,30 @@
+<launch>
+  <!-- We resume the logic in empty_world.launch, changing only the name of the world to be launched -->
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+
+    <arg name="world_name" value="$(find drone_gazebo)/worlds/field_dynamic.world"/>
+    <!-- more default parameters can be changed here -->
+  </include>
+
+  <!-- Moving objects tries to avoid humans-->
+  <arg name="avoidance" default="false" />
+  
+  <!-- person1 -->
+  <node pkg="drone_gazebo" type="field_motion.py" name="motion1" args="'person_walking1' '[(5, 5), (5, -6), (-2, -8), (-6, 6)]' $(arg avoidance)" />
+  <!-- person2 -->
+  <node pkg="drone_gazebo" type="field_motion.py" name="motion2" args="'person_walking2' '[(-4, 4), (-1, -4)]' $(arg avoidance)" />
+  <!-- person3 -->
+  <node pkg="drone_gazebo" type="field_motion.py" name="motion3" args="'person_walking3' '[(11, 5), (11, -8),(11, -8)]' $(arg avoidance)" />
+  <!-- person4 -->
+  <node pkg="drone_gazebo" type="field_motion.py" name="motion4" args="'person_walking4' '[(-5, 10), (8, 10)]' $(arg avoidance)" />
+  <!-- person5 -->
+  <node pkg="drone_gazebo" type="field_motion.py" name="motion5" args="'person_walking5' '[(-8, -11), (8, -11)]' $(arg avoidance)" />
+  <!-- person6 -->
+  <node pkg="drone_gazebo" type="field_motion.py" name="motion6" args="'person_walking6' '[(9.8, 5), (9.8, -8), (9.8, 5)]' $(arg avoidance)" />
+   <!-- person7 -->
+  <node pkg="drone_gazebo" type="field_motion.py" name="motion7" args="'person_walking7' '[(-9.3, 7.5), (-11, -3.8), (-7, -4), (-9.3, 7.5)]' $(arg avoidance)" />
+  <!-- person8 -->
+  <node pkg="drone_gazebo" type="field_motion.py" name="motion8" args="'person_walking8' '[(-2, -8), (-6, 6),(5, 5),(5, -6)]' $(arg avoidance)" />
+
+
+</launch>

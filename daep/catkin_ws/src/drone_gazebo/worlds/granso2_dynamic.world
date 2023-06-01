@@ -1,0 +1,1650 @@
+<sdf version='1.6'>
+  <world name='default'>
+    <gui fullscreen='0'>
+      <camera name='user_camera'>
+        <pose frame=''>-60.0946 -2.06879 29.7118 0 0.293803 -0.055645</pose>
+        <view_controller>orbit</view_controller>
+        <projection_type>perspective</projection_type>
+      </camera>
+    </gui>
+    <scene>
+      <sky>
+        <clouds>
+          <speed>12</speed>
+        </clouds>
+      </sky>
+      <grid>0</grid>
+      <ambient>0.4 0.4 0.4 1</ambient>
+      <background>0.7 0.7 0.7 1</background>
+      <shadows>1</shadows>
+    </scene>
+    <light name='sun' type='directional'>
+      <cast_shadows>1</cast_shadows>
+      <pose frame=''>0 0 10 0 -0 0</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <direction>-0.5 0.1 -0.9</direction>
+    </light>
+    <model name='granso'>
+      <static>1</static>
+      <pose frame=''>27 39 -30 0 -0 0</pose>
+      <link name='B_L0_4_1.obj'>
+        <visual name='visual-B_L0_4_1.obj'>
+          <geometry>
+            <mesh>
+              <uri>model://granso/B_L0_4_1.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision-B_L0_4_1.obj'>
+          <geometry>
+            <mesh>
+              <uri>model://granso/B_L0_4_1.obj</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='B_L0_3_1.obj'>
+        <visual name='visual-B_L0_3_1.obj'>
+          <geometry>
+            <mesh>
+              <uri>model://granso/B_L0_3_1.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision-B_L0_3_1.obj'>
+          <geometry>
+            <mesh>
+              <uri>model://granso/B_L0_3_1.obj</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='B_L0_2_3.obj'>
+        <visual name='visual-B_L0_2_3.obj'>
+          <geometry>
+            <mesh>
+              <uri>model://granso/B_L0_2_3.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision-B_L0_2_3.obj'>
+          <geometry>
+            <mesh>
+              <uri>model://granso/B_L0_2_3.obj</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='I_L0_0_-2.obj'>
+        <visual name='visual-I_L0_0_-2.obj'>
+          <geometry>
+            <mesh>
+              <uri>model://granso/I_L0_0_-2.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision-I_L0_0_-2.obj'>
+          <geometry>
+            <mesh>
+              <uri>model://granso/I_L0_0_-2.obj</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='B_L0_3_2.obj'>
+        <visual name='visual-B_L0_3_2.obj'>
+          <geometry>
+            <mesh>
+              <uri>model://granso/B_L0_3_2.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision-B_L0_3_2.obj'>
+          <geometry>
+            <mesh>
+              <uri>model://granso/B_L0_3_2.obj</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='I_L0_0_1.obj'>
+        <visual name='visual-I_L0_0_1.obj'>
+          <geometry>
+            <mesh>
+              <uri>model://granso/I_L0_0_1.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision-I_L0_0_1.obj'>
+          <geometry>
+            <mesh>
+              <uri>model://granso/I_L0_0_1.obj</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='merged_L0_2_0.obj'>
+        <visual name='visual-merged_L0_2_0.obj'>
+          <geometry>
+            <mesh>
+              <uri>model://granso/merged_L0_2_0.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision-merged_L0_2_0.obj'>
+          <geometry>
+            <mesh>
+              <uri>model://granso/merged_L0_2_0.obj</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='I_L0_1_-1.obj'>
+        <visual name='visual-I_L0_1_-1.obj'>
+          <geometry>
+            <mesh>
+              <uri>model://granso/I_L0_1_-1.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision-I_L0_1_-1.obj'>
+          <geometry>
+            <mesh>
+              <uri>model://granso/I_L0_1_-1.obj</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='B_L0_0_2.obj'>
+        <visual name='visual-B_L0_0_2.obj'>
+          <geometry>
+            <mesh>
+              <uri>model://granso/B_L0_0_2.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision-B_L0_0_2.obj'>
+          <geometry>
+            <mesh>
+              <uri>model://granso/B_L0_0_2.obj</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='B_L0_3_0.obj'>
+        <visual name='visual-B_L0_3_0.obj'>
+          <geometry>
+            <mesh>
+              <uri>model://granso/B_L0_3_0.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision-B_L0_3_0.obj'>
+          <geometry>
+            <mesh>
+              <uri>model://granso/B_L0_3_0.obj</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='B_L0_2_2.obj'>
+        <visual name='visual-B_L0_2_2.obj'>
+          <geometry>
+            <mesh>
+              <uri>model://granso/B_L0_2_2.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision-B_L0_2_2.obj'>
+          <geometry>
+            <mesh>
+              <uri>model://granso/B_L0_2_2.obj</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='I_L0_0_0.obj'>
+        <visual name='visual-I_L0_0_0.obj'>
+          <geometry>
+            <mesh>
+              <uri>model://granso/I_L0_0_0.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision-I_L0_0_0.obj'>
+          <geometry>
+            <mesh>
+              <uri>model://granso/I_L0_0_0.obj</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='I_L0_0_-1.obj'>
+        <visual name='visual-I_L0_0_-1.obj'>
+          <geometry>
+            <mesh>
+              <uri>model://granso/I_L0_0_-1.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision-I_L0_0_-1.obj'>
+          <geometry>
+            <mesh>
+              <uri>model://granso/I_L0_0_-1.obj</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='B_L0_0_5.obj'>
+        <visual name='visual-B_L0_0_5.obj'>
+          <geometry>
+            <mesh>
+              <uri>model://granso/B_L0_0_5.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision-B_L0_0_5.obj'>
+          <geometry>
+            <mesh>
+              <uri>model://granso/B_L0_0_5.obj</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='I_L0_2_-1.obj'>
+        <visual name='visual-I_L0_2_-1.obj'>
+          <geometry>
+            <mesh>
+              <uri>model://granso/I_L0_2_-1.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision-I_L0_2_-1.obj'>
+          <geometry>
+            <mesh>
+              <uri>model://granso/I_L0_2_-1.obj</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='merged_L0_1_2.obj'>
+        <visual name='visual-merged_L0_1_2.obj'>
+          <geometry>
+            <mesh>
+              <uri>model://granso/merged_L0_1_2.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision-merged_L0_1_2.obj'>
+          <geometry>
+            <mesh>
+              <uri>model://granso/merged_L0_1_2.obj</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='merged_L0_1_3.obj'>
+        <visual name='visual-merged_L0_1_3.obj'>
+          <geometry>
+            <mesh>
+              <uri>model://granso/merged_L0_1_3.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision-merged_L0_1_3.obj'>
+          <geometry>
+            <mesh>
+              <uri>model://granso/merged_L0_1_3.obj</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='B_L0_3_3.obj'>
+        <visual name='visual-B_L0_3_3.obj'>
+          <geometry>
+            <mesh>
+              <uri>model://granso/B_L0_3_3.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision-B_L0_3_3.obj'>
+          <geometry>
+            <mesh>
+              <uri>model://granso/B_L0_3_3.obj</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='B_L0_5_1.obj'>
+        <visual name='visual-B_L0_5_1.obj'>
+          <geometry>
+            <mesh>
+              <uri>model://granso/B_L0_5_1.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision-B_L0_5_1.obj'>
+          <geometry>
+            <mesh>
+              <uri>model://granso/B_L0_5_1.obj</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='B_L0_1_5.obj'>
+        <visual name='visual-B_L0_1_5.obj'>
+          <geometry>
+            <mesh>
+              <uri>model://granso/B_L0_1_5.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision-B_L0_1_5.obj'>
+          <geometry>
+            <mesh>
+              <uri>model://granso/B_L0_1_5.obj</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='B_L0_2_1.obj'>
+        <visual name='visual-B_L0_2_1.obj'>
+          <geometry>
+            <mesh>
+              <uri>model://granso/B_L0_2_1.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision-B_L0_2_1.obj'>
+          <geometry>
+            <mesh>
+              <uri>model://granso/B_L0_2_1.obj</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='B_L0_4_2.obj'>
+        <visual name='visual-B_L0_4_2.obj'>
+          <geometry>
+            <mesh>
+              <uri>model://granso/B_L0_4_2.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision-B_L0_4_2.obj'>
+          <geometry>
+            <mesh>
+              <uri>model://granso/B_L0_4_2.obj</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='B_L0_3_4.obj'>
+        <visual name='visual-B_L0_3_4.obj'>
+          <geometry>
+            <mesh>
+              <uri>model://granso/B_L0_3_4.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision-B_L0_3_4.obj'>
+          <geometry>
+            <mesh>
+              <uri>model://granso/B_L0_3_4.obj</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='B_L0_5_2.obj'>
+        <visual name='visual-B_L0_5_2.obj'>
+          <geometry>
+            <mesh>
+              <uri>model://granso/B_L0_5_2.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision-B_L0_5_2.obj'>
+          <geometry>
+            <mesh>
+              <uri>model://granso/B_L0_5_2.obj</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='I_L0_1_0.obj'>
+        <visual name='visual-I_L0_1_0.obj'>
+          <geometry>
+            <mesh>
+              <uri>model://granso/I_L0_1_0.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision-I_L0_1_0.obj'>
+          <geometry>
+            <mesh>
+              <uri>model://granso/I_L0_1_0.obj</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='B_L0_2_4.obj'>
+        <visual name='visual-B_L0_2_4.obj'>
+          <geometry>
+            <mesh>
+              <uri>model://granso/B_L0_2_4.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision-B_L0_2_4.obj'>
+          <geometry>
+            <mesh>
+              <uri>model://granso/B_L0_2_4.obj</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='merged_L0_0_3.obj'>
+        <visual name='visual-merged_L0_0_3.obj'>
+          <geometry>
+            <mesh>
+              <uri>model://granso/merged_L0_0_3.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision-merged_L0_0_3.obj'>
+          <geometry>
+            <mesh>
+              <uri>model://granso/merged_L0_0_3.obj</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='B_L0_2_5.obj'>
+        <visual name='visual-B_L0_2_5.obj'>
+          <geometry>
+            <mesh>
+              <uri>model://granso/B_L0_2_5.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision-B_L0_2_5.obj'>
+          <geometry>
+            <mesh>
+              <uri>model://granso/B_L0_2_5.obj</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='B_L0_1_4.obj'>
+        <visual name='visual-B_L0_1_4.obj'>
+          <geometry>
+            <mesh>
+              <uri>model://granso/B_L0_1_4.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision-B_L0_1_4.obj'>
+          <geometry>
+            <mesh>
+              <uri>model://granso/B_L0_1_4.obj</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='B_L0_0_4.obj'>
+        <visual name='visual-B_L0_0_4.obj'>
+          <geometry>
+            <mesh>
+              <uri>model://granso/B_L0_0_4.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision-B_L0_0_4.obj'>
+          <geometry>
+            <mesh>
+              <uri>model://granso/B_L0_0_4.obj</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='B_L0_4_3.obj'>
+        <visual name='visual-B_L0_4_3.obj'>
+          <geometry>
+            <mesh>
+              <uri>model://granso/B_L0_4_3.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision-B_L0_4_3.obj'>
+          <geometry>
+            <mesh>
+              <uri>model://granso/B_L0_4_3.obj</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='merged_L0_1_1.obj'>
+        <visual name='visual-merged_L0_1_1.obj'>
+          <geometry>
+            <mesh>
+              <uri>model://granso/merged_L0_1_1.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision-merged_L0_1_1.obj'>
+          <geometry>
+            <mesh>
+              <uri>model://granso/merged_L0_1_1.obj</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='I_L0_1_-2.obj'>
+        <visual name='visual-I_L0_1_-2.obj'>
+          <geometry>
+            <mesh>
+              <uri>model://granso/I_L0_1_-2.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision-I_L0_1_-2.obj'>
+          <geometry>
+            <mesh>
+              <uri>model://granso/I_L0_1_-2.obj</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='B_L0_4_0.obj'>
+        <visual name='visual-B_L0_4_0.obj'>
+          <geometry>
+            <mesh>
+              <uri>model://granso/B_L0_4_0.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name='collision-B_L0_4_0.obj'>
+          <geometry>
+            <mesh>
+              <uri>model://granso/B_L0_4_0.obj</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    <spherical_coordinates>
+      <surface_model>EARTH_WGS84</surface_model>
+      <latitude_deg>57.7614</latitude_deg>
+      <longitude_deg>16.6825</longitude_deg>
+      <elevation>500</elevation>
+      <heading_deg>0</heading_deg>
+    </spherical_coordinates>
+    <physics name='default_physics' default='0' type='ode'>
+      <ode>
+        <solver>
+          <type>quick</type>
+          <iters>1000</iters>
+          <sor>1.3</sor>
+          <use_dynamic_moi_rescaling>0</use_dynamic_moi_rescaling>
+        </solver>
+        <constraints>
+          <cfm>0</cfm>
+          <erp>0.2</erp>
+          <contact_max_correcting_vel>100</contact_max_correcting_vel>
+          <contact_surface_layer>0.001</contact_surface_layer>
+        </constraints>
+      </ode>
+      <max_step_size>0.01</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>100</real_time_update_rate>
+    </physics>
+    <plugin name='gazebo_octomap' filename='libBuildOctomapPlugin.so'/>
+    <gravity>0 0 -9.8</gravity>
+    <magnetic_field>6e-06 2.3e-05 -4.2e-05</magnetic_field>
+    <atmosphere type='adiabatic'/>
+    <audio>
+      <device>default</device>
+    </audio>
+    <wind/>
+    <state world_name='default'>
+      <sim_time>1127 260000000</sim_time>
+      <real_time>130 173484707</real_time>
+      <wall_time>1683283012 943529573</wall_time>
+      <iterations>13003</iterations>
+      <model name='granso'>
+        <pose frame=''>51.678 13.1259 -30 0 0 -0.690797</pose>
+        <scale>1 1 1</scale>
+        <link name='B_L0_0_2.obj'>
+          <pose frame=''>51.678 13.1259 -30 0 0 -0.690797</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='B_L0_0_4.obj'>
+          <pose frame=''>51.678 13.1259 -30 0 0 -0.690797</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='B_L0_0_5.obj'>
+          <pose frame=''>51.678 13.1259 -30 0 0 -0.690797</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='B_L0_1_4.obj'>
+          <pose frame=''>51.678 13.1259 -30 0 0 -0.690797</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='B_L0_1_5.obj'>
+          <pose frame=''>51.678 13.1259 -30 0 0 -0.690797</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='B_L0_2_1.obj'>
+          <pose frame=''>51.678 13.1259 -30 0 0 -0.690797</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='B_L0_2_2.obj'>
+          <pose frame=''>51.678 13.1259 -30 0 0 -0.690797</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='B_L0_2_3.obj'>
+          <pose frame=''>51.678 13.1259 -30 0 0 -0.690797</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='B_L0_2_4.obj'>
+          <pose frame=''>51.678 13.1259 -30 0 0 -0.690797</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='B_L0_2_5.obj'>
+          <pose frame=''>51.678 13.1259 -30 0 0 -0.690797</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='B_L0_3_0.obj'>
+          <pose frame=''>51.678 13.1259 -30 0 0 -0.690797</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='B_L0_3_1.obj'>
+          <pose frame=''>51.678 13.1259 -30 0 0 -0.690797</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='B_L0_3_2.obj'>
+          <pose frame=''>51.678 13.1259 -30 0 0 -0.690797</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='B_L0_3_3.obj'>
+          <pose frame=''>51.678 13.1259 -30 0 0 -0.690797</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='B_L0_3_4.obj'>
+          <pose frame=''>51.678 13.1259 -30 0 0 -0.690797</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='B_L0_4_0.obj'>
+          <pose frame=''>51.678 13.1259 -30 0 0 -0.690797</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='B_L0_4_1.obj'>
+          <pose frame=''>51.678 13.1259 -30 0 0 -0.690797</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='B_L0_4_2.obj'>
+          <pose frame=''>51.678 13.1259 -30 0 0 -0.690797</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='B_L0_4_3.obj'>
+          <pose frame=''>51.678 13.1259 -30 0 0 -0.690797</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='B_L0_5_1.obj'>
+          <pose frame=''>51.678 13.1259 -30 0 0 -0.690797</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='B_L0_5_2.obj'>
+          <pose frame=''>51.678 13.1259 -30 0 0 -0.690797</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='I_L0_0_-1.obj'>
+          <pose frame=''>51.678 13.1259 -30 0 0 -0.690797</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='I_L0_0_-2.obj'>
+          <pose frame=''>51.678 13.1259 -30 0 0 -0.690797</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='I_L0_0_0.obj'>
+          <pose frame=''>51.678 13.1259 -30 0 0 -0.690797</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='I_L0_0_1.obj'>
+          <pose frame=''>51.678 13.1259 -30 0 0 -0.690797</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='I_L0_1_-1.obj'>
+          <pose frame=''>51.678 13.1259 -30 0 0 -0.690797</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='I_L0_1_-2.obj'>
+          <pose frame=''>51.678 13.1259 -30 0 0 -0.690797</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='I_L0_1_0.obj'>
+          <pose frame=''>51.678 13.1259 -30 0 0 -0.690797</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='I_L0_2_-1.obj'>
+          <pose frame=''>51.678 13.1259 -30 0 0 -0.690797</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='merged_L0_0_3.obj'>
+          <pose frame=''>51.678 13.1259 -30 0 0 -0.690797</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='merged_L0_1_1.obj'>
+          <pose frame=''>51.678 13.1259 -30 0 0 -0.690797</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='merged_L0_1_2.obj'>
+          <pose frame=''>51.678 13.1259 -30 0 0 -0.690797</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='merged_L0_1_3.obj'>
+          <pose frame=''>51.678 13.1259 -30 0 0 -0.690797</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='merged_L0_2_0.obj'>
+          <pose frame=''>51.678 13.1259 -30 0 0 -0.690797</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='ground_plane'>
+        <pose frame=''>0 0 -3 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>0 0 -3 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='ground_plane_0'>
+        <pose frame=''>98.4587 1.80243 -3 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>98.4587 1.80243 -3 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='ground_plane_1'>
+        <pose frame=''>170.688 -3.00425 -3 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>170.688 -3.00425 -3 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+
+      <light name='sun'>
+        <pose frame=''>0 0 10 0 -0 0</pose>
+      </light>
+    </state>
+    <model name='ground_plane'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>65535</collide_bitmask>
+              <ode/>
+            </contact>
+            <friction>
+              <ode>
+                <mu>100</mu>
+                <mu2>50</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>37.983 -2.36534 0 0 -0 0</pose>
+    </model>
+
+    <include>
+      <name>person_walking1</name>
+      <pose frame=''>161 -82 6.5 0 -0 4.71</pose>
+      <uri>model://person_walking_fixed</uri>
+    </include>
+
+    <include>
+      <name>person_walking2</name>
+      <pose frame=''>161 -82 6.6 0 -0 4.71</pose>
+      <uri>model://person_walking_fixed</uri>
+    </include>
+
+    <include>
+      <name>person_walking8</name>
+      <pose frame=''>161 -82 6.2 0 -0 4.71</pose>
+      <uri>model://person_walking_fixed</uri>
+    </include>
+
+    <include>
+      <name>person_walking9</name>
+      <pose frame=''>161 -82 6.7 0 -0 4.71</pose>
+      <uri>model://person_walking_fixed</uri>
+    </include>
+        
+    <include>
+      <name>person_walking10</name>
+      <pose frame=''>161 -82 6.2 0 -0 4.71</pose>
+      <uri>model://person_walking_fixed</uri>
+    </include>
+
+    <include>
+      <name>person_walking11</name>
+      <pose frame=''>161 -82 6.1 0 -0 4.71</pose>
+      <uri>model://person_walking_fixed</uri>
+    </include>
+
+    <include>
+      <name>person_walking12</name>
+      <pose frame=''>161 -82 6 0 -0 4.71</pose>
+      <uri>model://person_walking_fixed</uri>
+    </include>
+
+  
+    <include>
+      <name>person_walking13</name>
+      <pose frame=''>161 -82 6.2 0 -0 4.71</pose>
+      <uri>model://person_walking_fixed</uri>
+    </include>
+
+    <include>
+      <name>person_walking14</name>
+      <pose frame=''>161 -82 7 0 -0 4.71</pose>
+      <uri>model://person_walking_fixed</uri>
+    </include>
+
+    <include>
+      <name>person_walking15</name>
+      <pose frame=''>161 -82 6.7 0 -0 4.71</pose>
+      <uri>model://person_walking_fixed</uri>
+    </include>
+
+    <include>
+      <name>person_walking16</name>
+      <pose frame=''>161 -82 6.2 0 -0 4.71</pose>
+      <uri>model://person_walking_fixed</uri>
+    </include>
+
+    <include>
+      <name>person_walking3</name>
+      <pose frame=''>161 -82 6.6 0 -0 4.71</pose>
+      <uri>model://person_walking_fixed</uri>
+    </include>
+
+    <include>
+      <name>person_walking4</name>
+      <pose frame=''>161 -82 6.8 0 -0 4.71</pose>
+      <uri>model://person_walking_fixed</uri>
+    </include>
+
+    <include>
+      <name>person_walking5</name>
+      <pose frame=''>161 -82 6.5 -0 4.71</pose>
+      <uri>model://person_walking_fixed</uri>
+    </include>
+
+    <include>
+      <name>person_walking7</name>
+      <pose frame=''>161 -82 6.35 0 -0 4.71</pose>
+      <uri>model://person_walking_fixed</uri>
+    </include>
+
+
+
+    <model name='ground_plane_0'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>65535</collide_bitmask>
+              <ode/>
+            </contact>
+            <friction>
+              <ode>
+                <mu>100</mu>
+                <mu2>50</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>98.4587 1.80243 0 0 -0 0</pose>
+    </model>
+    <model name='ground_plane_1'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>65535</collide_bitmask>
+              <ode/>
+            </contact>
+            <friction>
+              <ode>
+                <mu>100</mu>
+                <mu2>50</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose frame=''>170.688 -3.00425 0 0 -0 0</pose>
+    </model>
+  </world>
+</sdf>

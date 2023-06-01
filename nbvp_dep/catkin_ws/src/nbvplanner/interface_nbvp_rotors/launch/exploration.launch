@@ -1,0 +1,25 @@
+<launch>
+  <arg name="mav_name" default="firefly" />
+  <arg name="enable_logging" default="false" />
+  <arg name="log_file" default="$(arg mav_name)" />
+
+  <arg name="config_file" default="cafe_exploration.yaml" />
+
+  <node pkg="tf" type="static_transform_publisher" name="tf_53" args="0 0 0 0 0 0 world navigation 100" />
+  
+
+  <!--Note, the .yaml file must match the world we are exploring-->
+  <include file="$(find interface_nbvp_rotors)/launch/mav_inspector.launch">
+    <arg name="mav_name" value="$(arg mav_name)" />
+    <arg name="param_file" value="$(find interface_nbvp_rotors)/resource/$(arg config_file)" />
+    <arg name="enable_logging" value="$(arg enable_logging)" />
+    <arg name="log_file" value="$(arg log_file)" />
+    <arg name="tf_frame" value="navigation" />
+    <arg name="pcl_topic" value="/camera/depth/points" />
+    <arg name="resolution" value="0.2" />
+    <arg name="visualize_max_z" value="5.0" />
+    <arg name="sensor_max_range" value="5.0" />
+  </include>
+
+  <include file="$(find aeplanner_evaluation)/launch/coverage_evaluation.launch"/>
+</launch>

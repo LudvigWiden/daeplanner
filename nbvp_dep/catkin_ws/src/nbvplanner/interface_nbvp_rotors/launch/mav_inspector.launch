@@ -1,0 +1,35 @@
+<launch>
+  <arg name="mav_name" default="firefly" />
+  <arg name="subscript" default="" />
+  <arg name="enable_logging" default="false" />
+  <arg name="log_file" default="$(arg mav_name)" />
+  <arg name="param_file" default="$(find nbvplanner)/resource/exploration.yaml" />
+  <arg name="tf_frame" default="navigation" />
+  <arg name="pcl_topic" default="/pointcloudOut" />
+  <arg name="stl_file_path" default="" />
+  <arg name="mesh_resolution" default="1.0" />
+  <arg name="resolution" default="0.2" />
+  <arg name="visualize_max_z" default="999" />
+  <arg name="sensor_max_range" default="5.0" />
+  
+  
+  <group ns="$(arg mav_name)$(arg subscript)">
+    <node name="nbvPlanner" pkg="nbvplanner" type="nbvPlanner" output="screen">
+      <param name="tf_frame" type="string" value="$(arg tf_frame)" />
+      <param name="resolution" type="double" value="$(arg resolution)" />
+      <param name="visualize_max_z" type="double" value="$(arg visualize_max_z)" />
+      <param name="sensor_max_range" type="double" value="$(arg sensor_max_range)" />
+      <param name="stl_file_path" type="string" value="$(arg stl_file_path)" />
+      <param name="mesh_resolution" type="double" value="$(arg mesh_resolution)" />
+      <param name="map_publish_frequency" type="double" value="1.0" />
+      <remap from="pointcloud_throttled" to="$(arg pcl_topic)"/>
+      <remap from="nbvplanner" to="/$(arg mav_name)$(arg subscript)/nbvplanner"/>
+      <rosparam command="load" file="$(arg param_file)" />
+    </node>
+
+    <node name="exploration" pkg="interface_nbvp_rotors" type="exploration" output="screen" >
+      <rosparam command="load" file="$(arg param_file)" />
+    </node>
+    
+  </group>
+</launch>

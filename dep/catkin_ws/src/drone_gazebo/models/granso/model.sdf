@@ -1,0 +1,621 @@
+<?xml version='1.0'?>
+<sdf version='1.4'>
+  <model name='granso'>
+    <static>1</static>
+    <pose>27 39 -30 0 0 0</pose>
+
+
+    <link name='B_L0_4_1.obj'>
+      <visual name='visual-B_L0_4_1.obj'>
+        <geometry>
+          <mesh>
+	    <uri>model://granso/B_L0_4_1.obj</uri>
+	  </mesh>
+        </geometry>
+      </visual>
+      <collision name='collision-B_L0_4_1.obj'>
+        <geometry>
+          <mesh>
+	    <uri>model://granso/B_L0_4_1.obj</uri>
+	  </mesh>
+        </geometry>
+      </collision>
+    </link>
+
+
+    <link name='B_L0_3_1.obj'>
+      <visual name='visual-B_L0_3_1.obj'>
+        <geometry>
+          <mesh>
+	    <uri>model://granso/B_L0_3_1.obj</uri>
+	  </mesh>
+        </geometry>
+      </visual>
+      <collision name='collision-B_L0_3_1.obj'>
+        <geometry>
+          <mesh>
+	    <uri>model://granso/B_L0_3_1.obj</uri>
+	  </mesh>
+        </geometry>
+      </collision>
+    </link>
+
+
+    <link name='B_L0_2_3.obj'>
+      <visual name='visual-B_L0_2_3.obj'>
+        <geometry>
+          <mesh>
+	    <uri>model://granso/B_L0_2_3.obj</uri>
+	  </mesh>
+        </geometry>
+      </visual>
+      <collision name='collision-B_L0_2_3.obj'>
+        <geometry>
+          <mesh>
+	    <uri>model://granso/B_L0_2_3.obj</uri>
+	  </mesh>
+        </geometry>
+      </collision>
+    </link>
+
+
+    <link name='I_L0_0_-2.obj'>
+      <visual name='visual-I_L0_0_-2.obj'>
+        <geometry>
+          <mesh>
+	    <uri>model://granso/I_L0_0_-2.obj</uri>
+	  </mesh>
+        </geometry>
+      </visual>
+      <collision name='collision-I_L0_0_-2.obj'>
+        <geometry>
+          <mesh>
+	    <uri>model://granso/I_L0_0_-2.obj</uri>
+	  </mesh>
+        </geometry>
+      </collision>
+    </link>
+
+
+    <link name='B_L0_3_2.obj'>
+      <visual name='visual-B_L0_3_2.obj'>
+        <geometry>
+          <mesh>
+	    <uri>model://granso/B_L0_3_2.obj</uri>
+	  </mesh>
+        </geometry>
+      </visual>
+      <collision name='collision-B_L0_3_2.obj'>
+        <geometry>
+          <mesh>
+	    <uri>model://granso/B_L0_3_2.obj</uri>
+	  </mesh>
+        </geometry>
+      </collision>
+    </link>
+
+
+    <link name='I_L0_0_1.obj'>
+      <visual name='visual-I_L0_0_1.obj'>
+        <geometry>
+          <mesh>
+	    <uri>model://granso/I_L0_0_1.obj</uri>
+	  </mesh>
+        </geometry>
+      </visual>
+      <collision name='collision-I_L0_0_1.obj'>
+        <geometry>
+          <mesh>
+	    <uri>model://granso/I_L0_0_1.obj</uri>
+	  </mesh>
+        </geometry>
+      </collision>
+    </link>
+
+
+    <link name='merged_L0_2_0.obj'>
+      <visual name='visual-merged_L0_2_0.obj'>
+        <geometry>
+          <mesh>
+	    <uri>model://granso/merged_L0_2_0.obj</uri>
+	  </mesh>
+        </geometry>
+      </visual>
+      <collision name='collision-merged_L0_2_0.obj'>
+        <geometry>
+          <mesh>
+	    <uri>model://granso/merged_L0_2_0.obj</uri>
+	  </mesh>
+        </geometry>
+      </collision>
+    </link>
+
+
+    <link name='I_L0_1_-1.obj'>
+      <visual name='visual-I_L0_1_-1.obj'>
+        <geometry>
+          <mesh>
+	    <uri>model://granso/I_L0_1_-1.obj</uri>
+	  </mesh>
+        </geometry>
+      </visual>
+      <collision name='collision-I_L0_1_-1.obj'>
+        <geometry>
+          <mesh>
+	    <uri>model://granso/I_L0_1_-1.obj</uri>
+	  </mesh>
+        </geometry>
+      </collision>
+    </link>
+
+
+    <link name='B_L0_0_2.obj'>
+      <visual name='visual-B_L0_0_2.obj'>
+        <geometry>
+          <mesh>
+	    <uri>model://granso/B_L0_0_2.obj</uri>
+	  </mesh>
+        </geometry>
+      </visual>
+      <collision name='collision-B_L0_0_2.obj'>
+        <geometry>
+          <mesh>
+	    <uri>model://granso/B_L0_0_2.obj</uri>
+	  </mesh>
+        </geometry>
+      </collision>
+    </link>
+
+
+    <link name='B_L0_3_0.obj'>
+      <visual name='visual-B_L0_3_0.obj'>
+        <geometry>
+          <mesh>
+	    <uri>model://granso/B_L0_3_0.obj</uri>
+	  </mesh>
+        </geometry>
+      </visual>
+      <collision name='collision-B_L0_3_0.obj'>
+        <geometry>
+          <mesh>
+	    <uri>model://granso/B_L0_3_0.obj</uri>
+	  </mesh>
+        </geometry>
+      </collision>
+    </link>
+
+
+    <link name='B_L0_2_2.obj'>
+      <visual name='visual-B_L0_2_2.obj'>
+        <geometry>
+          <mesh>
+	    <uri>model://granso/B_L0_2_2.obj</uri>
+	  </mesh>
+        </geometry>
+      </visual>
+      <collision name='collision-B_L0_2_2.obj'>
+        <geometry>
+          <mesh>
+	    <uri>model://granso/B_L0_2_2.obj</uri>
+	  </mesh>
+        </geometry>
+      </collision>
+    </link>
+
+
+    <link name='I_L0_0_0.obj'>
+      <visual name='visual-I_L0_0_0.obj'>
+        <geometry>
+          <mesh>
+	    <uri>model://granso/I_L0_0_0.obj</uri>
+	  </mesh>
+        </geometry>
+      </visual>
+      <collision name='collision-I_L0_0_0.obj'>
+        <geometry>
+          <mesh>
+	    <uri>model://granso/I_L0_0_0.obj</uri>
+	  </mesh>
+        </geometry>
+      </collision>
+    </link>
+
+
+    <link name='I_L0_0_-1.obj'>
+      <visual name='visual-I_L0_0_-1.obj'>
+        <geometry>
+          <mesh>
+	    <uri>model://granso/I_L0_0_-1.obj</uri>
+	  </mesh>
+        </geometry>
+      </visual>
+      <collision name='collision-I_L0_0_-1.obj'>
+        <geometry>
+          <mesh>
+	    <uri>model://granso/I_L0_0_-1.obj</uri>
+	  </mesh>
+        </geometry>
+      </collision>
+    </link>
+
+
+    <link name='B_L0_0_5.obj'>
+      <visual name='visual-B_L0_0_5.obj'>
+        <geometry>
+          <mesh>
+	    <uri>model://granso/B_L0_0_5.obj</uri>
+	  </mesh>
+        </geometry>
+      </visual>
+      <collision name='collision-B_L0_0_5.obj'>
+        <geometry>
+          <mesh>
+	    <uri>model://granso/B_L0_0_5.obj</uri>
+	  </mesh>
+        </geometry>
+      </collision>
+    </link>
+
+
+    <link name='I_L0_2_-1.obj'>
+      <visual name='visual-I_L0_2_-1.obj'>
+        <geometry>
+          <mesh>
+	    <uri>model://granso/I_L0_2_-1.obj</uri>
+	  </mesh>
+        </geometry>
+      </visual>
+      <collision name='collision-I_L0_2_-1.obj'>
+        <geometry>
+          <mesh>
+	    <uri>model://granso/I_L0_2_-1.obj</uri>
+	  </mesh>
+        </geometry>
+      </collision>
+    </link>
+
+
+    <link name='merged_L0_1_2.obj'>
+      <visual name='visual-merged_L0_1_2.obj'>
+        <geometry>
+          <mesh>
+	    <uri>model://granso/merged_L0_1_2.obj</uri>
+	  </mesh>
+        </geometry>
+      </visual>
+      <collision name='collision-merged_L0_1_2.obj'>
+        <geometry>
+          <mesh>
+	    <uri>model://granso/merged_L0_1_2.obj</uri>
+	  </mesh>
+        </geometry>
+      </collision>
+    </link>
+
+
+    <link name='merged_L0_1_3.obj'>
+      <visual name='visual-merged_L0_1_3.obj'>
+        <geometry>
+          <mesh>
+	    <uri>model://granso/merged_L0_1_3.obj</uri>
+	  </mesh>
+        </geometry>
+      </visual>
+      <collision name='collision-merged_L0_1_3.obj'>
+        <geometry>
+          <mesh>
+	    <uri>model://granso/merged_L0_1_3.obj</uri>
+	  </mesh>
+        </geometry>
+      </collision>
+    </link>
+
+
+    <link name='B_L0_3_3.obj'>
+      <visual name='visual-B_L0_3_3.obj'>
+        <geometry>
+          <mesh>
+	    <uri>model://granso/B_L0_3_3.obj</uri>
+	  </mesh>
+        </geometry>
+      </visual>
+      <collision name='collision-B_L0_3_3.obj'>
+        <geometry>
+          <mesh>
+	    <uri>model://granso/B_L0_3_3.obj</uri>
+	  </mesh>
+        </geometry>
+      </collision>
+    </link>
+
+
+    <link name='B_L0_5_1.obj'>
+      <visual name='visual-B_L0_5_1.obj'>
+        <geometry>
+          <mesh>
+	    <uri>model://granso/B_L0_5_1.obj</uri>
+	  </mesh>
+        </geometry>
+      </visual>
+      <collision name='collision-B_L0_5_1.obj'>
+        <geometry>
+          <mesh>
+	    <uri>model://granso/B_L0_5_1.obj</uri>
+	  </mesh>
+        </geometry>
+      </collision>
+    </link>
+
+
+    <link name='B_L0_1_5.obj'>
+      <visual name='visual-B_L0_1_5.obj'>
+        <geometry>
+          <mesh>
+	    <uri>model://granso/B_L0_1_5.obj</uri>
+	  </mesh>
+        </geometry>
+      </visual>
+      <collision name='collision-B_L0_1_5.obj'>
+        <geometry>
+          <mesh>
+	    <uri>model://granso/B_L0_1_5.obj</uri>
+	  </mesh>
+        </geometry>
+      </collision>
+    </link>
+
+
+    <link name='B_L0_2_1.obj'>
+      <visual name='visual-B_L0_2_1.obj'>
+        <geometry>
+          <mesh>
+	    <uri>model://granso/B_L0_2_1.obj</uri>
+	  </mesh>
+        </geometry>
+      </visual>
+      <collision name='collision-B_L0_2_1.obj'>
+        <geometry>
+          <mesh>
+	    <uri>model://granso/B_L0_2_1.obj</uri>
+	  </mesh>
+        </geometry>
+      </collision>
+    </link>
+
+
+    <link name='B_L0_4_2.obj'>
+      <visual name='visual-B_L0_4_2.obj'>
+        <geometry>
+          <mesh>
+	    <uri>model://granso/B_L0_4_2.obj</uri>
+	  </mesh>
+        </geometry>
+      </visual>
+      <collision name='collision-B_L0_4_2.obj'>
+        <geometry>
+          <mesh>
+	    <uri>model://granso/B_L0_4_2.obj</uri>
+	  </mesh>
+        </geometry>
+      </collision>
+    </link>
+
+
+    <link name='B_L0_3_4.obj'>
+      <visual name='visual-B_L0_3_4.obj'>
+        <geometry>
+          <mesh>
+	    <uri>model://granso/B_L0_3_4.obj</uri>
+	  </mesh>
+        </geometry>
+      </visual>
+      <collision name='collision-B_L0_3_4.obj'>
+        <geometry>
+          <mesh>
+	    <uri>model://granso/B_L0_3_4.obj</uri>
+	  </mesh>
+        </geometry>
+      </collision>
+    </link>
+
+
+    <link name='B_L0_5_2.obj'>
+      <visual name='visual-B_L0_5_2.obj'>
+        <geometry>
+          <mesh>
+	    <uri>model://granso/B_L0_5_2.obj</uri>
+	  </mesh>
+        </geometry>
+      </visual>
+      <collision name='collision-B_L0_5_2.obj'>
+        <geometry>
+          <mesh>
+	    <uri>model://granso/B_L0_5_2.obj</uri>
+	  </mesh>
+        </geometry>
+      </collision>
+    </link>
+
+
+    <link name='I_L0_1_0.obj'>
+      <visual name='visual-I_L0_1_0.obj'>
+        <geometry>
+          <mesh>
+	    <uri>model://granso/I_L0_1_0.obj</uri>
+	  </mesh>
+        </geometry>
+      </visual>
+      <collision name='collision-I_L0_1_0.obj'>
+        <geometry>
+          <mesh>
+	    <uri>model://granso/I_L0_1_0.obj</uri>
+	  </mesh>
+        </geometry>
+      </collision>
+    </link>
+
+
+    <link name='B_L0_2_4.obj'>
+      <visual name='visual-B_L0_2_4.obj'>
+        <geometry>
+          <mesh>
+	    <uri>model://granso/B_L0_2_4.obj</uri>
+	  </mesh>
+        </geometry>
+      </visual>
+      <collision name='collision-B_L0_2_4.obj'>
+        <geometry>
+          <mesh>
+	    <uri>model://granso/B_L0_2_4.obj</uri>
+	  </mesh>
+        </geometry>
+      </collision>
+    </link>
+
+
+    <link name='merged_L0_0_3.obj'>
+      <visual name='visual-merged_L0_0_3.obj'>
+        <geometry>
+          <mesh>
+	    <uri>model://granso/merged_L0_0_3.obj</uri>
+	  </mesh>
+        </geometry>
+      </visual>
+      <collision name='collision-merged_L0_0_3.obj'>
+        <geometry>
+          <mesh>
+	    <uri>model://granso/merged_L0_0_3.obj</uri>
+	  </mesh>
+        </geometry>
+      </collision>
+    </link>
+
+
+    <link name='B_L0_2_5.obj'>
+      <visual name='visual-B_L0_2_5.obj'>
+        <geometry>
+          <mesh>
+	    <uri>model://granso/B_L0_2_5.obj</uri>
+	  </mesh>
+        </geometry>
+      </visual>
+      <collision name='collision-B_L0_2_5.obj'>
+        <geometry>
+          <mesh>
+	    <uri>model://granso/B_L0_2_5.obj</uri>
+	  </mesh>
+        </geometry>
+      </collision>
+    </link>
+
+
+    <link name='B_L0_1_4.obj'>
+      <visual name='visual-B_L0_1_4.obj'>
+        <geometry>
+          <mesh>
+	    <uri>model://granso/B_L0_1_4.obj</uri>
+	  </mesh>
+        </geometry>
+      </visual>
+      <collision name='collision-B_L0_1_4.obj'>
+        <geometry>
+          <mesh>
+	    <uri>model://granso/B_L0_1_4.obj</uri>
+	  </mesh>
+        </geometry>
+      </collision>
+    </link>
+
+
+    <link name='B_L0_0_4.obj'>
+      <visual name='visual-B_L0_0_4.obj'>
+        <geometry>
+          <mesh>
+	    <uri>model://granso/B_L0_0_4.obj</uri>
+	  </mesh>
+        </geometry>
+      </visual>
+      <collision name='collision-B_L0_0_4.obj'>
+        <geometry>
+          <mesh>
+	    <uri>model://granso/B_L0_0_4.obj</uri>
+	  </mesh>
+        </geometry>
+      </collision>
+    </link>
+
+
+    <link name='B_L0_4_3.obj'>
+      <visual name='visual-B_L0_4_3.obj'>
+        <geometry>
+          <mesh>
+	    <uri>model://granso/B_L0_4_3.obj</uri>
+	  </mesh>
+        </geometry>
+      </visual>
+      <collision name='collision-B_L0_4_3.obj'>
+        <geometry>
+          <mesh>
+	    <uri>model://granso/B_L0_4_3.obj</uri>
+	  </mesh>
+        </geometry>
+      </collision>
+    </link>
+
+
+    <link name='merged_L0_1_1.obj'>
+      <visual name='visual-merged_L0_1_1.obj'>
+        <geometry>
+          <mesh>
+	    <uri>model://granso/merged_L0_1_1.obj</uri>
+	  </mesh>
+        </geometry>
+      </visual>
+      <collision name='collision-merged_L0_1_1.obj'>
+        <geometry>
+          <mesh>
+	    <uri>model://granso/merged_L0_1_1.obj</uri>
+	  </mesh>
+        </geometry>
+      </collision>
+    </link>
+
+
+    <link name='I_L0_1_-2.obj'>
+      <visual name='visual-I_L0_1_-2.obj'>
+        <geometry>
+          <mesh>
+	    <uri>model://granso/I_L0_1_-2.obj</uri>
+	  </mesh>
+        </geometry>
+      </visual>
+      <collision name='collision-I_L0_1_-2.obj'>
+        <geometry>
+          <mesh>
+	    <uri>model://granso/I_L0_1_-2.obj</uri>
+	  </mesh>
+        </geometry>
+      </collision>
+    </link>
+
+
+    <link name='B_L0_4_0.obj'>
+      <visual name='visual-B_L0_4_0.obj'>
+        <geometry>
+          <mesh>
+	    <uri>model://granso/B_L0_4_0.obj</uri>
+	  </mesh>
+        </geometry>
+      </visual>
+      <collision name='collision-B_L0_4_0.obj'>
+        <geometry>
+          <mesh>
+	    <uri>model://granso/B_L0_4_0.obj</uri>
+	  </mesh>
+        </geometry>
+      </collision>
+    </link>
+
+
+  </model>
+</sdf>

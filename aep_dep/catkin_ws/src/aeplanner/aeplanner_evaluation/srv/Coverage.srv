@@ -1,0 +1,6 @@
+---
+float64 coverage_p
+float64 coverage_m3
+float64 free
+float64 occupied
+float64 unmapped

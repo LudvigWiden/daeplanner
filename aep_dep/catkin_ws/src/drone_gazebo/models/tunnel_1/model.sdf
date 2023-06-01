@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <model name="tunnel_1">
+    <static>true</static>
+    <link name="tunnel_1_link">
+      <collision name="collision">
+        <geometry>
+          <mesh>
+          <scale>2 2 2</scale>
+            <uri>model://tunnel_1/meshes/model.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <mesh>
+          <scale>2 2 2</scale>
+            <uri>model://tunnel_1/meshes/model.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+  </model>
+</sdf>
+
