@@ -23,3 +23,4 @@ The system was tested on a computer with:
 
 #### Installation and execution
 See [Wiki](https://github.com/LudvigWiden/daeplanner/wiki). 
+[Screencast from 2023-06-02 09:00:54.webm](https://github.com/LudvigWiden/daeplanner/assets/78347385/dcbe39e2-5813-44d4-8cde-4c59c356c02b)
