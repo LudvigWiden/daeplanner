@@ -27,3 +27,4 @@ See [Wiki](https://github.com/LudvigWiden/daeplanner/wiki).
 #### Video
 https://github.com/LudvigWiden/daeplanner/assets/78347385/b482a337-784f-4d59-a1f9-26012dac2a2c
 
+![I'm going to do an internet - Imgur](https://github.com/LudvigWiden/daeplanner/assets/78347385/c93b4d90-6bc2-4264-8e8a-a095e60692e5)
