@@ -25,5 +25,3 @@ The system was tested on a computer with:
 
 #### Installation and execution
 See [Wiki](https://github.com/LudvigWiden/daeplanner/wiki). 
-
-#### Video
