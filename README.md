@@ -1,6 +1,8 @@
 # Autonomous 3D exploration with dynamic obstacles
 ## Towards Intelligent Navigation and Collision Avoidance for Autonomous 3D Exploration with dynamic obstacles
 ### By Ludvig Widén & Emil Wiman
+![Screenshot from 2023-06-02 10-05-22](https://github.com/LudvigWiden/daeplanner/assets/78347385/48c0db2c-8e36-4d06-a3f5-5226cdf6cad4)
+Image: Gränsö Castle in Gazebo. Used for evaluating the planner in a large-scale environment with multiple pedestrians.
 
 #### Information
 This repository is linked to Ludvig and Emils Master Thesis Work at Linköping University.
@@ -25,6 +27,3 @@ The system was tested on a computer with:
 See [Wiki](https://github.com/LudvigWiden/daeplanner/wiki). 
 
 #### Video
-https://github.com/LudvigWiden/daeplanner/assets/78347385/b482a337-784f-4d59-a1f9-26012dac2a2c
-
-![I'm going to do an internet - Imgur](https://github.com/LudvigWiden/daeplanner/assets/78347385/c93b4d90-6bc2-4264-8e8a-a095e60692e5)
