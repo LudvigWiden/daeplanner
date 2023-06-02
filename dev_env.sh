@@ -25,7 +25,7 @@ fi
 
 
 if [[ "$COMMAND" = "build" ]]; then
-    docker build -q $IMAGE_PATH -t $IMAGE_NAME
+    docker build $IMAGE_PATH -t $IMAGE_NAME
     exit 0
 fi
 
