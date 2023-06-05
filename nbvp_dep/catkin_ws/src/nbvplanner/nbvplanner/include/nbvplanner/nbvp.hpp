@@ -217,7 +217,7 @@ bool nbvInspection::nbvPlanner<stateVec>::plannerCallback(nbvplanner::nbvp_srv::
     segment.poses.push_back(res.path.front());
     segment.poses.push_back(res.path.back());
   }
-  evadePub_.publish(segment);
+  //evadePub_.publish(segment);
   ROS_INFO("Path computation lasted %2.3fs", (ros::Time::now() - computationTime).toSec());
   return true;
 }
