@@ -11,7 +11,7 @@ This master's thesis aims to investigate how a system can be built to autonomous
 
 It resulted in a modified and extended version of the Autonomous Exploration Planner [AEP](https://github.com/mseln/aeplanner), called **Dynamic Autonomous Exploration Planner (DAEP)**.
 
-To evaluate DAEP, the planner was compared with AEP, [DEP](https://github.com/Zhefan-Xu/DEP), and [RH-NBVP](https://github.com/ethz-asl/nbvplanner). This repo contains contains functionality to run the mentioned planners in a rootless docker environment.
+To evaluate DAEP, the planner was compared with [AEP](https://github.com/mseln/aeplanner), [DEP](https://github.com/Zhefan-Xu/DEP), and [RH-NBVP](https://github.com/ethz-asl/nbvplanner). This repo contains contains functionality to run the mentioned planners in a rootless docker environment.
 
 For more information on how daeplanner works, please see the [thesis report]().
 
