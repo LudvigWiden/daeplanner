@@ -25,3 +25,16 @@ The system was tested on a computer with:
 
 #### Installation and execution
 See [Wiki](https://github.com/LudvigWiden/daeplanner/wiki). 
+
+### Showcase
+These GIFS present the exploration with DAEP in two different scenarios.
+
+![cafe3](https://github.com/LudvigWiden/daeplanner/assets/78347385/d8b478c0-bd4e-4794-b290-c087d42f85ec)
+
+Exploration in the Cafe World with the DAEP. White cylinders represent dynamic obstacles. Green area represent the
+the future uncertainty of the pedestrian motion.
+
+![crosswalks1](https://github.com/LudvigWiden/daeplanner/assets/78347385/de51d86d-9478-4a83-be66-65f0ce6846ce)
+
+Exploration in the Crosswalks World with DAEP. White cylinders represent dynamic obstacles. Green area represent the
+the future uncertainty of the pedestrian motion.
