@@ -1,5 +1,5 @@
-# Autonomous 3D exploration with dynamic obstacles
-## Towards Intelligent Navigation and Collision Avoidance for Autonomous 3D Exploration with dynamic obstacles
+# Autonomous 3D Exploration with Dynamic Obstacles
+## Towards Intelligent Navigation and Collision Avoidance for Autonomous 3D Exploration with Dynamic Obstacles
 ### By Ludvig Widén & Emil Wiman
 ![Screenshot from 2023-06-02 10-05-22](https://github.com/LudvigWiden/daeplanner/assets/78347385/48c0db2c-8e36-4d06-a3f5-5226cdf6cad4)
 Image: Gränsö Village in Gazebo. Used for evaluating the planner in a large-scale environment with multiple pedestrians. This area is roughly 1 hectare.
