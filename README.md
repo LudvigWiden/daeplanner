@@ -27,7 +27,7 @@ The system was tested on a computer with:
 See [Wiki](https://github.com/LudvigWiden/daeplanner/wiki). 
 
 ## Showcase
-These GIFS present the exploration with DAEP in two different scenarios.
+These GIFS present the exploration with DAEP in two different scenarios. A video is also available [here](https://www.youtube.com/watch?v=uFQ_ha519sk).
 
 ![cafe3](https://github.com/LudvigWiden/daeplanner/assets/78347385/d8b478c0-bd4e-4794-b290-c087d42f85ec)
 
