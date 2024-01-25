@@ -4,7 +4,7 @@
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
     <arg name="world_name" value="$(find drone_gazebo)/worlds/cafe_static.world"/>
     <!-- more default parameters can be changed here -->
-    <arg name="gui" value="false"/>
+    <arg name="gui" value="true"/>
   </include>
 
   <!--  Does not affect anything but arg is required for simulation.sh -->
