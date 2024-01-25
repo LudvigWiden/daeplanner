@@ -1,0 +1,12 @@
+float64 horizontal_limit
+float64 vertical_limit
+
+float64 repulsion_horizontal_limit
+float64 repulsion_vertical_limit
+
+float64 repulsion_horizontal_offset
+float64 repulsion_vertical_offset
+
+---
+bool success
+string message

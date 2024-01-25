@@ -1,0 +1,1 @@
+general/StringStamped.msg

@@ -9,6 +9,8 @@ import math
 import numpy as np
 from std_msgs.msg import Bool
 from visualization_msgs.msg import Marker
+from mrs_msgs.srv import PathSrv, PathSrvRequest
+from mrs_msgs.msg import Reference
 
 
 target_model_name = "drone"
@@ -45,6 +47,54 @@ MAX_Z = boundary_max[2]
 MIN_X = boundary_min[0]
 MIN_Y = boundary_min[1]
 
+def sendMrsTrajectory(pos_x, pos_y, pos_z, yaw, max_speed):
+	rospy.wait_for_service('/uav1/trajectory_generation/path')
+
+	try:
+		path_service = rospy.ServiceProxy('/uav1/trajectory_generation/path', PathSrv)
+
+		request = PathSrvRequest()
+		request.path.header.stamp = rospy.Time.now()
+		request.path.fly_now = True
+		request.path.stop_at_waypoints = False
+		request.path.loop = False
+
+		request.path.override_constraints = True
+		request.path.override_max_velocity_horizontal = max_speed
+		request.path.override_max_acceleration_horizontal = 4.0
+		request.path.override_max_jerk_horizontal = 60.0
+		request.path.override_max_velocity_vertical = 4.0
+		request.path.override_max_acceleration_vertical = 2.0
+		request.path.override_max_jerk_vertical = 60.0
+		
+		request.path.use_heading = True
+		request.path.relax_heading = False
+
+		if len(yaw) == 1 and yaw[0] == 0:
+			yaw = [0] * len(pos_x) 
+
+		for px, py, pz, yw in zip(pos_x, pos_y, pos_z, yaw):
+			wp = Reference()
+			wp.position.x = px
+			wp.position.y = py
+			wp.position.z = pz
+			wp.heading = yw
+			request.path.points.append(wp)
+
+		response = path_service(request)
+
+		if response.success:
+			rospy.loginfo('Path request successful: %s', response.message)
+		else:
+			rospy.logwarn('Path request failed: %s', response.message)
+
+	except rospy.ServiceException as e:
+		rospy.logerr('Service call failed: %s', str(e))
+
+# Send to Gazebo And MRS
+def sendDestination(position):
+	pub.publish(position)
+
 # Keep track of human positions
 def update_human_positions(model_states):
 	global dynamic_objects
@@ -67,9 +117,9 @@ def strength_function(distance):
 # Get the bounding box of the drone
 def get_drone_bbox(drone_position):
 	drone_bounds = np.array([
-        [drone_position.x - drone_l/2, drone_position.x + drone_l/2],
-        [drone_position.y - drone_w/2, drone_position.y + drone_w/2],
-        [drone_position.z, drone_position.z + drone_h]])
+		[drone_position.x - drone_l/2, drone_position.x + drone_l/2],
+		[drone_position.y - drone_w/2, drone_position.y + drone_w/2],
+		[drone_position.z, drone_position.z + drone_h]])
 	return drone_bounds
 
 # Get the bounding box of a human
@@ -84,15 +134,15 @@ def get_human_bbox(human_position):
 # Get the distance between two bounding boxes.
 def get_bbox_distance(drone_bbox, human_bbox):
     drone_center = np.array([(drone_bbox[0,0] + drone_bbox[0,1])/2,
-                             (drone_bbox[1,0] + drone_bbox[1,1])/2,
-                             (drone_bbox[2,0] + drone_bbox[2,1])/2])
+							 (drone_bbox[1,0] + drone_bbox[1,1])/2,
+							 (drone_bbox[2,0] + drone_bbox[2,1])/2])
     human_center = np.array([(human_bbox[0,0] + human_bbox[0,1])/2,
-                             (human_bbox[1,0] + human_bbox[1,1])/2,
-                             (human_bbox[2,0] + human_bbox[2,1])/2])
+							 (human_bbox[1,0] + human_bbox[1,1])/2,
+							 (human_bbox[2,0] + human_bbox[2,1])/2])
     distance = np.linalg.norm(drone_center - human_center) \
-               - 0.5*(drone_bbox[0,1]-drone_bbox[0,0]) \
-               - 0.5*(drone_bbox[1,1]-drone_bbox[1,0]) \
-               - 0.5*(drone_bbox[2,1]-drone_bbox[2,0])
+			   - 0.5*(drone_bbox[0,1]-drone_bbox[0,0]) \
+			   - 0.5*(drone_bbox[1,1]-drone_bbox[1,0]) \
+			   - 0.5*(drone_bbox[2,1]-drone_bbox[2,0])
     return distance
 
 
