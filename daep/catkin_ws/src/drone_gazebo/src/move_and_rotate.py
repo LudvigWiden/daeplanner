@@ -94,6 +94,11 @@ def sendMrsTrajectory(pos_x, pos_y, pos_z, yaw, max_speed):
 # Send to Gazebo And MRS
 def sendDestination(position):
 	pub.publish(position)
+	pos_x = [position.pose.position.x]
+	pos_y = [position.pose.position.y]
+	pos_z = [position.pose.position.z]
+	yaw = [position.twist.angular.z]
+	sendMrsTrajectory(pos_x, pos_y, pos_z, yaw, 8)
 
 # Keep track of human positions
 def update_human_positions(model_states):
