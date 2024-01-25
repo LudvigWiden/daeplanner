@@ -1,5 +1,21 @@
 <?xml version="1.0" ?>
 <launch>
+
+	<node pkg="nodelet" type="nodelet" args="manager" name="standalone_nodelet" output="screen"/>
+
+    <node pkg="nodelet" type="nodelet" name="depth_image_proc" args="load depth_image_proc/point_cloud_xyzrgb standalone_nodelet --no-bond">
+        <!-- <remap from="rgb/image_rect_color" to="/uav1/rgbd/color/image_raw"/> -->
+        <remap from="rgb/camera_info" to="/uav1/rgbd/color/camera_info"/>
+        <remap from="rgb/image_rect_color" to="/uav1/rgbd/color/modified/image_raw"/>
+        <remap from="depth_registered/image_rect" to="/uav1/rgbd/aligned_depth_to_color/image_raw"/>
+        <remap from="depth_registered/points" to="/camera/depth_registered/modified/points"/>
+
+        <!-- <remap from="rgb/camera_info" to="/uav1/front_rgbd/color/camera_info"/>
+        <remap from="rgb/image_rect_color" to="/uav1/front_rgbd/color/modified/image_raw"/>
+        <remap from="depth_registered/image_rect" to="/uav1/front_rgbd/aligned_depth_to_color/image_raw"/>
+        <remap from="depth_registered/points" to="/camera/depth_registered/modified/points"/> -->
+    </node>
+
 	<node pkg="octomap_server" type="octomap_server_node" name="octomap_server">
 		<param name="resolution" value="0.2" />
 		<param name="publish_free_space" value="true" />
