@@ -380,7 +380,8 @@ def callback(all_states, goal):
 		while not rospy.is_shutdown():
 			connections = pub.get_num_connections()
 			if (connections > 0):
-				pub.publish(target_state)
+				#pub.publish(target_state)
+				sendDestination(target_state)
 				GOAL_REACHED.data = False
 				goal_reached_pub.publish(GOAL_REACHED)
 				break
@@ -408,7 +409,8 @@ def callback(all_states, goal):
 			target_state.pose = target_pose
 			target_state.twist = target_twist
 			# Publish ModelState
-			pub.publish(target_state)
+			#pub.publish(target_state)
+			sendDestination(target_state)
 			GOAL_REACHED.data = False
 			goal_reached_pub.publish(GOAL_REACHED)
 		else:
@@ -439,7 +441,8 @@ def callback(all_states, goal):
 					connections = pub.get_num_connections()
 					if (connections > 0):
 						# Publish ModelState
-						pub.publish(target_state)
+						#pub.publish(target_state)
+						sendDestination(target_state)
 						GOAL_REACHED.data = False
 						goal_reached_pub.publish(GOAL_REACHED)
 						break
@@ -472,7 +475,8 @@ def callback(all_states, goal):
 				target_state.pose = target_pose
 				target_state.twist = target_twist
 				# Publish ModelState
-				pub.publish(target_state)
+				#pub.publish(target_state)
+				sendDestination(target_state)
 				goal_reached_pub.publish(GOAL_REACHED)
 			
 	
