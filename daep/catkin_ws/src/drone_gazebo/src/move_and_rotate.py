@@ -307,6 +307,7 @@ def callback(all_states, goal):
 	dy = goal_y - cy
 	dz = goal_z - cz
 	dyaw = (goal_yaw - current_yaw)
+	goal_yaw = goal_yaw if goal_yaw < 6.23 else goal_yaw - (2 * math.pi)
 	print('distances goal:', goal_x, goal_y, goal_z, goal_yaw)
 	print('distances position:', cx, cy, cz, current_yaw)
 
@@ -395,6 +396,7 @@ def callback(all_states, goal):
 		else:
 			# We have rotated and we are not rotating
 			# How close should the drone move?
+			# reach = (abs(dx)**2+abs(dy)**2+abs(dz)**2)**0.5 < POSITION_DIFF
 			reach = (abs(dx)**2+abs(dy)**2+abs(dz)**2)**0.5 < POSITION_DIFF
 			# print('reach', reach)
 			# First move the position
