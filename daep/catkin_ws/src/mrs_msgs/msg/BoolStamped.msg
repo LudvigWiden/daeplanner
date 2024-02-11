@@ -1,0 +1,1 @@
+stamped_msgs/BoolStamped.msg

@@ -1,0 +1,1 @@
+gnss/RtkFixType.msg

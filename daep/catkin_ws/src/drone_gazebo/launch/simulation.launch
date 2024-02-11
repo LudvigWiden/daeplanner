@@ -10,10 +10,10 @@
     <!-- Drone avoidance -->
     <arg name="avoidance_mode" default="true" />
 
-     <!-- Load world and Gazebo -->
-    <include file="$(arg world_launch)">
+    <!-- Load world and Gazebo -->
+    <!-- <include file="$(arg world_launch)">
       <arg name="avoidance" value="$(arg avoidance)"/>
-    </include>
+    </include> -->
 
     <!--Set the correct config file-->
      <arg name="config_file" default="$(arg world)_exploration.yaml" />
@@ -21,9 +21,9 @@
      <rosparam command="load" file="$(arg param_file)" />
 
     <!-- Spawn drone -->
-    <node pkg="drone_gazebo" type="spawn_drone.py" name="spawn_drone" output="screen">
+    <!-- <node pkg="drone_gazebo" type="spawn_drone.py" name="spawn_drone" output="screen">
       <param name="spawn_pos" value="$(arg spawn_pos)" />
-    </node>
+    </node> -->
     
     <!-- Motion planning -->
     <node pkg="drone_gazebo" type="move_and_rotate.py" name="move_and_rotate" output="screen">
@@ -32,7 +32,7 @@
     </node>
    
     <!-- Transform Broadcaster -->
-    <node name="tfbc" pkg="drone_gazebo" type="transform_broadcaster"/> 
+    <!-- <node name="tfbc" pkg="drone_gazebo" type="transform_broadcaster"/>  -->
 
     <!--Start the pose publisher -->
     <!--Set "usePoseStamped" to 'True' for PoseStamped, or 'False' for PoseWithCovarianceStamped -->

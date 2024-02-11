@@ -28,6 +28,6 @@ if __name__ == '__main__':
     else:
         pose_pub = rospy.Publisher('/pose', PoseWithCovarianceStamped, queue_size=10)
 
-    rospy.Subscriber('/odom', Odometry, odom_callback)
+    rospy.Subscriber('/uav1/estimation_manager/odom_main', Odometry, odom_callback)
     rospy.spin()
 

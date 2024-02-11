@@ -1,0 +1,1 @@
+uav_managers/VelocityReference.msg

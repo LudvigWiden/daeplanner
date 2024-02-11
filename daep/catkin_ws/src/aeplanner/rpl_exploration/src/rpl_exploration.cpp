@@ -69,15 +69,20 @@ Control when the motion planner has reached a goal
 void goalReachedCallback(const std_msgs::Bool::ConstPtr& msg)
 {
     // Lock 'goal_reached' so that we don't send consecutive 'True' and miss a fly
+    // ROS_INFO("drone_freeze: %s", drone_freeze ? "true" : "false");
     if(drone_freeze)
     {
       goal_reached = true;
     }
     else
     {
+    //   ROS_INFO("msg->data: %s", msg->data ? "true" : "false");
+    //   ROS_INFO("goal_reached: %s", goal_reached ? "true" : "false");
+    //   ROS_INFO("prev_goal_reached: %s", prev_goal_reached ? "true" : "false");
       if (msg->data != prev_goal_reached)
       {
           goal_reached = msg->data;
+          // ROS_INFO("Received message: %s", msg->data);
           prev_goal_reached = goal_reached;
       }
     }
@@ -111,28 +116,29 @@ void newGoalCallback(const geometry_msgs::PoseStamped::ConstPtr& msg)
   Publishes goal continously and waits for motion planner /goal_reached topic.
 */
 void publishGoalAndWait(ros::Publisher goal_pub, int const& freq, rpl_exploration::Goal const& goal){
- 
   int avoidance_counter = 0;
   if(drone_freeze)
   {
     return;
   }
-
   geometry_msgs::Pose start_pose = current_pose_stamped.pose;
 
   geometry_msgs::Pose last_pose = current_pose_stamped.pose;
 
   ros::Rate rate(freq); 
-   
   while (ros::ok())
     {
+        // ROS_INFO("publishGoalAndWait");
+
       // Publish the goal pose
       goal_pub.publish(goal);
       ros::spinOnce();
       new_plan = false;
 
+      // ROS_INFO("Avoidance: %s", avoidance ? "true" : "false");
       if(avoidance)
       { 
+        // ROS_INFO("check avoidance");
         //Avoidance mode is active, a new goal has been published
         if(new_goal.pose != prev_goal.pose)
         {
@@ -160,8 +166,10 @@ void publishGoalAndWait(ros::Publisher goal_pub, int const& freq, rpl_exploratio
         }
       }
         // Check if the goal has been reached
+      // ROS_INFO("Goal reached: %s", goal_reached ? "true" : "false");
       if (goal_reached)
       {
+        // ROS_INFO("Check goal reached");
             geometry_msgs::Pose final_pose;
             final_pose.position.x = goal.x;
             final_pose.position.y = goal.y;
@@ -308,11 +316,15 @@ int main(int argc, char** argv)
   goal.y = init_pose->pose.position.y;
   goal.z = init_pose->pose.position.z;
   goal.yaw = 2;
+  ROS_INFO("Fisrt Yaw");
   publishGoalAndWait(goal_pub, GOAL_PUB_FREQ, goal);
   goal.yaw = 4;
+  ROS_INFO("Second Yaw");
   publishGoalAndWait(goal_pub, GOAL_PUB_FREQ, goal);
+  ROS_INFO("Third Yaw");
   goal.yaw = tf2::getYaw(init_pose->pose.orientation);
   publishGoalAndWait(goal_pub, GOAL_PUB_FREQ, goal);
+  ROS_INFO("Last Yaw");
 
   int iteration = 1;
   int actions_taken = 1;

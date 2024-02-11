@@ -1,0 +1,4 @@
+mrs_msgs/DynamicsConstraints constraints
+---
+bool success
+string message

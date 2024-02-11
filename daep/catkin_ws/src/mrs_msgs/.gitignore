@@ -1,0 +1,12 @@
+*.swp
+*.swo
+
+msg/*.msg
+srv/*.srv
+
+doc/*
+
+debian
+.obj-x86_64-linux-gnu
+
+act.sh
