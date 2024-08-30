@@ -40,17 +40,18 @@ Exploration in the Crosswalks World with DAEP. White cylinders represent dynamic
 the future uncertainty of pedestrian motion.
 
 ## Credits
-If you find this work useful, please cite our paper (Soon ICRA2024).
+If you find this work useful, please cite our paper from ICRA2024.
 ```
-@misc{wiman2023autonomous3dexplorationlargescale,
-      title={Autonomous 3D Exploration in Large-Scale Environments with Dynamic Obstacles}, 
-      author={Emil Wiman and Ludvig Widén and Mattias Tiger and Fredrik Heintz},
-      year={2023},
-      eprint={2310.17977},
-      archivePrefix={arXiv},
-      primaryClass={cs.RO},
-      url={https://arxiv.org/abs/2310.17977}, 
-}
+@INPROCEEDINGS{10610996,
+  author={Wiman, Emil and Widén, Ludvig and Tiger, Mattias and Heintz, Fredrik},
+  booktitle={2024 IEEE International Conference on Robotics and Automation (ICRA)}, 
+  title={Autonomous 3D Exploration in Large-Scale Environments with Dynamic Obstacles}, 
+  year={2024},
+  volume={},
+  number={},
+  pages={2389-2395},
+  keywords={Three-dimensional displays;Autonomous systems;Benchmark testing;Planning;Collision avoidance;Robots},
+  doi={10.1109/ICRA57147.2024.10610996}}
 ```
 
 This work has been developed by Ludvig Widén and Emil Wiman with the help and support of the members at the [Division of Artificial Intelligence and Integrated Computer Systems](https://liu.se/en/organisation/liu/ida/aiics) at [Linköping University](https://liu.se/en).
