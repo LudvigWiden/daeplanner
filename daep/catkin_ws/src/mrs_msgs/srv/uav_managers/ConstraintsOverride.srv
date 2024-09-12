@@ -1,0 +1,5 @@
+float64 acceleration_horizontal
+float64 acceleration_vertical
+---
+bool success
+string message

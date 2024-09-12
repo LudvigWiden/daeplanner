@@ -1,0 +1,29 @@
+time stamp
+
+string api_name
+
+bool accepts_actuator_cmd
+bool accepts_attitude_cmd
+bool accepts_attitude_rate_cmd
+bool accepts_control_group_cmd
+bool accepts_acceleration_hdg_rate_cmd
+bool accepts_acceleration_hdg_cmd
+bool accepts_velocity_hdg_rate_cmd
+bool accepts_velocity_hdg_cmd
+bool accepts_position_cmd
+
+bool produces_ground_truth
+bool produces_gnss
+bool produces_rtk
+bool produces_imu
+bool produces_distance_sensor
+bool produces_altitude
+bool produces_magnetometer_heading
+bool produces_rc_channels
+bool produces_battery_state
+bool produces_position
+bool produces_orientation
+bool produces_velocity
+bool produces_angular_velocity
+bool produces_odometry
+bool produces_magnetic_field

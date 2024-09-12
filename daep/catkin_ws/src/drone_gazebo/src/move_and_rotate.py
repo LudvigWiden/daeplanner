@@ -9,6 +9,7 @@ import math
 import numpy as np
 from std_msgs.msg import Bool
 from visualization_msgs.msg import Marker
+from nav_msgs.msg import Odometry
 
 
 target_model_name = "drone"
@@ -17,7 +18,7 @@ rotate = False # Rotating at the moment
 
 
 
-POSITION_DIFF = 0.02 # Position minimum between the drone and a pose
+POSITION_DIFF = 0.5 # Position minimum between the drone and a pose
 ANGLE_DIFF = 0.06 # Orientation minimum between the drone and a pose
 SAFE_DISTANCE = 1.0 # How close we look for danger (dynamic obstacles)
 AVOIDANCE_DISTANCE = 0.10 # The length that we move away from danger
@@ -49,6 +50,7 @@ MIN_Y = boundary_min[1]
 def update_human_positions(model_states):
 	global dynamic_objects
 	for model in model_states.name:
+		# print(model)
 		if "person_walking" in model:
 			person_idx = model_states.name.index(model)
 			person_pose = model_states.pose[person_idx]
@@ -165,16 +167,16 @@ def visualize_goal_avoidance_arrow(displacement_vector, drone_position, AVOIDANC
 def callback(all_states, goal):
 	global rotate, AVOIDANCE_GOAL, AVOIDANCE_GOAL_X, AVOIDANCE_GOAL_Y, AVOIDANCE_GOAL_Z, AVOIDANCE_GOAL_YAW, DRONEPOS
 	# Wait until drone is present
-	if target_model_name not in all_states.name:
-		return
+	# if target_model_name not in all_states.name:
+	# 	return
 	
 	# Boolean publisher message
 	GOAL_REACHED = Bool()
 	GOAL_REACHED.data = False
 
 	# Find drone in model states
-	idx = all_states.name.index(target_model_name)
-	current_pose = all_states.pose[idx]
+	# idx = all_states.name.index(target_model_name)
+	current_pose = all_states.pose.pose
 	drone_position = current_pose.position
 	drone_orientation = current_pose.orientation
 	# Current x,y,z, rx, ry, rz, rw
@@ -187,7 +189,10 @@ def callback(all_states, goal):
 	crw = drone_orientation.w
 	(_, _, current_yaw) = euler_from_quaternion([crx, cry, crz, crw])
 	# Yaw between [0, 2pi]
+	# print('before yae:', current_yaw)
+	# current_yaw = current_yaw + (2*math.pi) if current_yaw < 0.0 else current_yaw
 	current_yaw = (current_yaw + 2*math.pi) % (2*math.pi)
+	# print('after yaw:', current_yaw)
 	#if current_yaw < 0:
 	#	current_yaw = 2*math.pi - (-current_yaw)
 
@@ -293,18 +298,29 @@ def callback(all_states, goal):
 		goal_y = goal.y
 		goal_z = goal.z	
 		goal_yaw = goal.yaw
+	
+	# goal_yaw = goal_yaw + (math.pi) if goal_yaw < 0.0 else goal_yaw
+	goal_yaw = (goal_yaw + 2*math.pi) % (2*math.pi)
 
 	# Difference between current pose and goal pose
 	dx = goal_x - cx
 	dy = goal_y - cy
 	dz = goal_z - cz
 	dyaw = (goal_yaw - current_yaw)
+	goal_yaw = goal_yaw if goal_yaw < 6.23 else goal_yaw - (2 * math.pi)
+	print('distances goal:', goal_x, goal_y, goal_z, goal_yaw)
+	print('distances position:', cx, cy, cz, current_yaw)
 
 	# Rotate drone
 	# How exact should the yaw angle be?
 	rotation_finish = abs(dyaw) < ANGLE_DIFF
 	
+	# print('rotate', rotate)
+	# print(not rotation_finish and not rotate)
+	# print(rotate)
+	# print(rotation_finish)
 	if (not rotation_finish and not rotate):
+		print('-------------- if (not rotation_finish and not rotate):')
 		# Rotation is not finished, and we have not already started a rotation
 		rotate = True
 
@@ -325,13 +341,29 @@ def callback(all_states, goal):
 		while not rospy.is_shutdown():
 			connections = pub.get_num_connections()
 			if (connections > 0):
-				pub.publish(target_state)
+				print('******** publishing')
+				# print(target_state.pose)
+				################################################################################################################
+				pose_msg = PoseStamped()
+				pose_msg.header.stamp = rospy.Time.now()
+				# pose_msg.pose = target_state.pose
+				pose_msg.pose.position.x = goal_x
+				pose_msg.pose.position.y = goal_y
+				pose_msg.pose.position.z = goal_z
+				qq = quaternion_from_euler(0, 0, goal_yaw)
+				pose_msg.pose.orientation.x = qq[0]
+				pose_msg.pose.orientation.y = qq[1]
+				pose_msg.pose.orientation.z = qq[2]
+				pose_msg.pose.orientation.w = qq[3]
+				pub.publish(pose_msg)
+				# send_mrs_trajectory([target_state.position.x], [target_state.position.y], [target_state.position.z])
 				GOAL_REACHED.data = False
 				goal_reached_pub.publish(GOAL_REACHED)
 				break
 			rospy.Rate(10).sleep()
 	
 	elif rotation_finish:
+		print('rotation_finish', rotation_finish)
 		# Rotation is finished
 		if rotate: # Check if we are currently rotating
 			rotate = False
@@ -353,13 +385,20 @@ def callback(all_states, goal):
 			target_state.pose = target_pose
 			target_state.twist = target_twist
 			# Publish ModelState
-			pub.publish(target_state)
+			####################################################################################################3
+			pose_msg = PoseStamped()
+			pose_msg.header.stamp = rospy.Time.now()
+			pose_msg.pose = target_state.pose
+			pub.publish(pose_msg)
+			# send_mrs_trajectory([target_state.position.x], [target_state.position.y], [target_state.position.z])
 			GOAL_REACHED.data = False
 			goal_reached_pub.publish(GOAL_REACHED)
 		else:
 			# We have rotated and we are not rotating
 			# How close should the drone move?
+			# reach = (abs(dx)**2+abs(dy)**2+abs(dz)**2)**0.5 < POSITION_DIFF
 			reach = (abs(dx)**2+abs(dy)**2+abs(dz)**2)**0.5 < POSITION_DIFF
+			# print('reach', reach)
 			# First move the position
 			if (not reach):
 				
@@ -384,12 +423,18 @@ def callback(all_states, goal):
 					connections = pub.get_num_connections()
 					if (connections > 0):
 						# Publish ModelState
-						pub.publish(target_state)
+						#######################################################################################################
+						pose_msg = PoseStamped()
+						pose_msg.header.stamp = rospy.Time.now()
+						pose_msg.pose = target_state.pose
+						pub.publish(pose_msg)
+						# send_mrs_trajectory([target_state.position.x], [target_state.position.y], [target_state.position.z])
 						GOAL_REACHED.data = False
 						goal_reached_pub.publish(GOAL_REACHED)
 						break
 					rospy.Rate(10).sleep()
 			else:
+				print('reach')
 				# Avoidance goal reached
 				if AVOIDANCE_GOAL:
 					AVOIDANCE_GOAL = False
@@ -417,7 +462,12 @@ def callback(all_states, goal):
 				target_state.pose = target_pose
 				target_state.twist = target_twist
 				# Publish ModelState
-				pub.publish(target_state)
+				##################################################################################
+				pose_msg = PoseStamped()
+				pose_msg.header.stamp = rospy.Time.now()
+				pose_msg.pose = target_pose
+				pub.publish(pose_msg)
+				# send_mrs_trajectory([target_state.position.x], [target_state.position.y], [target_state.position.z])
 				goal_reached_pub.publish(GOAL_REACHED)
 			
 	
@@ -433,12 +483,14 @@ if AVOIDANCE_ACTIVATED:
 else:
     print("Drone avoidance mode is disabled.")
 
-state_sub = message_filters.Subscriber("/gazebo/model_states", ModelStates)
+# state_sub = message_filters.Subscriber("/gazebo/model_states", ModelStates)
+state_sub = message_filters.Subscriber("/uav1/estimation_manager/odom_main", Odometry)
 goal_sub = message_filters.Subscriber("/goal", Goal)
 ts = message_filters.ApproximateTimeSynchronizer([state_sub, goal_sub], 100, 0.1, allow_headerless=True)
 ts.registerCallback(callback)
 
 # ModelState Subscriber
+# TODO check why it is not working
 dynamic_objects = {} # Contain poses and velocities
 dynamic_object_subscriber = rospy.Subscriber("/gazebo/model_states", ModelStates, update_human_positions)
 
@@ -458,7 +510,9 @@ target_twist = Twist()
 target_pose = Pose()
 
 # Update gazebo ModelState publisher 
-pub = rospy.Publisher("/gazebo/set_model_state", ModelState, queue_size=10)
+# TODO create new pub
+# pub = rospy.Publisher("/gazebo/set_model_state", ModelState, queue_size=10) 
+pub = rospy.Publisher('/mrs/goal', PoseStamped, queue_size=10)
 
 # Goal reached message publisher to planners
 goal_reached_pub = rospy.Publisher("/goal_reached", Bool, queue_size=1)

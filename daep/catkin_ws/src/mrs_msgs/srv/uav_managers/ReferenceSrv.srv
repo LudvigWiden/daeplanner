@@ -1,0 +1,4 @@
+mrs_msgs/Reference reference
+---
+bool success
+string message

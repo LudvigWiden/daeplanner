@@ -1,0 +1,4 @@
+mrs_msgs/VelocityReferenceStamped reference
+---
+bool success
+string message

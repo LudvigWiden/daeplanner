@@ -1,0 +1,8 @@
+std_msgs/Header header
+
+geometry_msgs/Vector3 position_errors
+float64 total_position_error
+float64 yaw_error
+
+float64 position_eland_threshold
+float64 position_failsafe_threshold

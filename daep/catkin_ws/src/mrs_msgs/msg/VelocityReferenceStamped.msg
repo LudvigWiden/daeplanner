@@ -1,0 +1,1 @@
+uav_managers/VelocityReferenceStamped.msg

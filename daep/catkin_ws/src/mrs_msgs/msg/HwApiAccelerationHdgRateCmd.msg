@@ -1,0 +1,1 @@
+hw_api/HwApiAccelerationHdgRateCmd.msg

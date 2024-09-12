@@ -1,0 +1,12 @@
+mrs_msgs/TrajectoryReference trajectory
+---
+
+# response of the currently active tracker
+bool success
+string message
+bool modified
+
+# responses of each loaded tracker
+string[] tracker_names
+bool[] tracker_successes
+string[] tracker_messages

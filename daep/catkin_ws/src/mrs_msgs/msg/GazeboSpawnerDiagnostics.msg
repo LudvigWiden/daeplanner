@@ -1,0 +1,1 @@
+gazebo_simulation/GazeboSpawnerDiagnostics.msg
